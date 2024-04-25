@@ -1,2 +1,5 @@
-tools/asm6: tools/asm6.c
-	gcc tools/asm6.c -o tools/asm6
+mm5: asm6
+
+asm6: 
+	$(MAKE) -C tools/
+	tools/asm6 main.asm test.nes
