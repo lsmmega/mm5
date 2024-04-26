@@ -1,2 +1,3 @@
-incsrc iNES.asm
+incsrc header.asm
+incsrc .\macros\ines.asm
 incsrc definitions.asm
