@@ -20,4 +20,5 @@ c = trained
 
 db mapper%16*16+a+b+c
 
+;ines_version_dbhex
 db mapper&%11110000, $00, $00, $00, $00, $00, $00, $00, $00
