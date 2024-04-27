@@ -18,7 +18,11 @@ b = battery_backed
 yes = 4
 c = trained
 
-db mapper%16*16+a+b+c
+;flags_6, mapper_lsb, rom_mirroring, battery_backed, trained
+db mapper%11110000*11110000+a+b+c
 
-;ines_version_dbhex
-db mapper&%11110000, $00, $00, $00, $00, $00, $00, $00, $00
+;flags_7, mapper_msb
+db mapper&%11110000
+
+;rarely_used
+db $00, $00, $00, $00, $00, $00, $00, $00
