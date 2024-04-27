@@ -21,7 +21,7 @@ c = trained
 ;flags_6, mapper_lsb, rom_mirroring, battery_backed, trained
 db mapper%11110000*11110000+a+b+c
 
-;flags_7, mapper_msb
+;flags_7, mapper_msb, version = ines
 db mapper&%11110000
 
 ;rarely_used
