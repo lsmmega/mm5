@@ -1,4 +1,5 @@
 ;mm5_header_information
+;version = ines
 
 prg_rom_units = 16
 chr_rom_units = 32
