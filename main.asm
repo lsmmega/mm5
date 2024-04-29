@@ -1,5 +1,5 @@
-incsrc header.asm
 incsrc .\macros\ines.asm
+incsrc header.asm
 incsrc definitions.asm
 bank=0
 base $8000
