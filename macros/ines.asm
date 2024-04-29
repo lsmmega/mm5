@@ -22,7 +22,7 @@ c=trained
 db mapper%16<<4+a+b+c
 
 ;flags_7,mapper_msb,version=ines
-db mapper&16
+db mapper&240
 
 ;rarely_used
 db $00,$00,$00,$00,$00,$00,$00,$00
