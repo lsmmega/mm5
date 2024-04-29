@@ -1,5 +1,6 @@
 total=77
 
+	db 76
 	dh instruments_pointers
 	dl instruments_pointers
 	
