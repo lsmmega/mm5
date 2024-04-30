@@ -1,7 +1,12 @@
+;audio_total
+	db (audio_data_end-audio_data_start)/2
+	
+;instruments_pointers
 	dh instruments_pointers
 	dl instruments_pointers
 	
 ;music
+	audio_data_start
 	dh music_gravity
 	dl music_gravity
 	dh music_stone
@@ -164,3 +169,4 @@
 ;sfx
 	dh sfx_get_weapon_energy
 	dl sfx_get_weapon_energy
+	audio_data_end
