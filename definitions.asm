@@ -1,5 +1,4 @@
 ;mm5_ram_pre_definitions
-
 keys_pressed_on_pad_1 = $14
 keys_pressed_on_pad_2 = $15
 keys_held_on_pad_1 = $16
@@ -187,7 +186,6 @@ channel_variables = $700
 drawing_buffer = $780
 
 ;nes_registers
-
 ppu_ctrl = $2000
 ppu_mask = $2001
 ppu_status = $2002
@@ -212,7 +210,6 @@ noise_low = $400e
 noise_high = $400f
 
 ;mmc3_registers
-
 bank_select = $8000
 bank_data = $8001
 mmc3_mirroring = $a000
