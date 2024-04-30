@@ -8,7 +8,7 @@ if a&1
 dh b
 dl b
 else
-db 0,0
+db 0, 0
 endif
 ENDM
 
@@ -17,7 +17,7 @@ if a&2
 dh b
 dl b
 else
-db 0,0
+db 0, 0
 endif
 ENDM
 
@@ -26,7 +26,7 @@ if a&4
 dh b
 dl b
 else
-db 0,0
+db 0, 0
 endif
 ENDM
 
@@ -35,6 +35,6 @@ if a&8
 dh b
 dl b
 else
-db 0,0
+db 0, 0
 endif
 ENDM
