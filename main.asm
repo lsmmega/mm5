@@ -93,10 +93,13 @@ base $8000
 pad $a000
 bank = 30
 base $c000
+incsrc .\engine\ppu_table_clear.asm
+incsrc .\engine\sprite_clear.asm
 pad $e000
 bank = 31
 base $e000
 pad $fe00
 incsrc .\engine\reset.asm
+incsrc .\engine\mirroring.asm
 pad $fffa
 incsrc vectors.asm
