@@ -76,6 +76,8 @@ base $8000
 pad $a000
 bank = 24
 base $8000
+pad $8a40
+incsrc .\audio\music_data_pointers.asm
 pad $a000
 bank = 25
 base $8000
