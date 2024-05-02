@@ -1,3 +1,3 @@
-;dw nmi
+dw nmi
 dw reset
-;dw irq
+dw irq

@@ -1,4 +1,5 @@
 incsrc .\macros\ines.asm
+incsrc .\macros\audio.asm
 incsrc header.asm
 incsrc definitions.asm
 bank = 0
@@ -93,6 +94,7 @@ base $8000
 pad $a000
 bank = 30
 base $c000
+pad $c343
 incsrc .\engine\ppu_table_clear.asm
 incsrc .\engine\sprite_clear.asm
 pad $e000
