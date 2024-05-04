@@ -9,7 +9,7 @@ dh b
 dl b
 else
 db 0, 0
-endif
+ENDIF
 ENDM
 
 MACRO channel_2 b
@@ -18,7 +18,7 @@ dh b
 dl b
 else
 db 0, 0
-endif
+ENDIF
 ENDM
 
 MACRO channel_3 b
@@ -27,7 +27,7 @@ dh b
 dl b
 else
 db 0, 0
-endif
+ENDIF
 ENDM
 
 MACRO channel_4 b
@@ -36,7 +36,7 @@ dh b
 dl b
 else
 db 0, 0
-endif
+ENDIF
 ENDM
 
 MACRO triplet_set
@@ -154,20 +154,20 @@ ENDM
 MACRO rest b
 if b&1
 c = $20
-elseif b&2
+ELSEIF b&2
 c = $40
-elseif b&4
+ELSEIF b&4
 c = $60
-elseif b&8
+ELSEIF b&8
 c = $80
-elseif b&16
+ELSEIF b&16
 c = $a0
-elseif b&32
+ELSEIF b&32
 c = $c0
-elseif b&64
+ELSEIF b&64
 c = $e0
-else
+ELSE
 error "invaild note length"
-endif
+ENDIF
 db c
 ENDM
