@@ -3,38 +3,39 @@ db 0
 ENDM
 
 a = channel_flags
-MACRO channel_1 b
-if a&1
-dh b
-dl b
-else
+
+MACRO channel_1 c
+IF a&1
+dh c
+dl c
+ELSE
 db 0, 0
 ENDIF
 ENDM
 
-MACRO channel_2 b
-if a&2
-dh b
-dl b
-else
+MACRO channel_2 c
+IF a&2
+dh c
+dl c
+ELSE
 db 0, 0
 ENDIF
 ENDM
 
-MACRO channel_3 b
-if a&4
-dh b
-dl b
-else
+MACRO channel_3 c
+IF a&4
+dh c
+dl c
+ELSE
 db 0, 0
 ENDIF
 ENDM
 
-MACRO channel_4 b
-if a&8
-dh b
-dl b
-else
+MACRO channel_4 c
+IF a&8
+dh c
+dl c
+ELSE
 db 0, 0
 ENDIF
 ENDM
@@ -51,123 +52,139 @@ MACRO dotted_set
 db 2
 ENDM
 
-MACRO flags b
-db 4, b
+MACRO octave_jump
+db 3
 ENDM
 
-MACRO tempo b
+MACRO flags c
+db 4, c
+ENDM
+
+MACRO tempo c
 db 5
-dh b
-dl b
+dh c
+dl c
 ENDM
 
-MACRO note_sustain_length b
-db 6, b
+MACRO note_sustain_length c
+db 6, c
 ENDM
 
-MACRO volume b
-db 7, b
+MACRO volume c
+db 7, c
 ENDM
 
-MACRO instrument b
-db 8, b
+MACRO instrument c
+db 8, c
 ENDM
 
-MACRO pitch_tune b
-db $c, b
+MACRO octave c
+db 9, c
 ENDM
 
-MACRO pitch_slide b
-db $d, b
+MACRO global_transpose c
+db $a, c
 ENDM
 
-MACRO loop1 b, c
+MACRO channel_transpose c
+db $c, d
+ENDM
+
+MACRO pitch_tune c
+db $c, c
+ENDM
+
+MACRO pitch_slide c
+db $d, c
+ENDM
+
+MACRO loop1 c, d
 db $e
-db c
-dh b
-dl b
+db d
+dh c
+dl c
 ENDM
 
-MACRO loop2 b, c
+MACRO loop2 c, d
 db $f
-db c
-dh b
-dl b
+db d
+dh c
+dl c
 ENDM
 
-MACRO loop3 b, c
+MACRO loop3 c, d
 db $10
-db c
-dh b
-dl b
+db d
+dh c
+dl c
 ENDM
 
-MACRO loop4 b, c
+MACRO loop4 c, d
 db $11
-db c
-dh b
-dl b
+db d
+dh c
+dl c
 ENDM
 
-MACRO break1 b, c
+MACRO break1 c, d
 db $12
-db c
-dh b
-dl b
+db d
+dh c
+dl c
 ENDM
 
-MACRO break2 b, c
+MACRO break2 c, d
 db $13
-db c
-dh b
-dl b
+db d
+dh c
+dl c
 ENDM
 
-MACRO break3 b, c
+MACRO break3 c, d
 db $14
-db c
-dh b
-dl b
+db d
+dh c
+dl c
 ENDM
 
-MACRO break4 b, c
+MACRO break4 c, d
 db $15
-db c
-dh b
-dl b
+db d
+dh c
+dl c
 ENDM
 
-MACRO jump b
+MACRO jump c
 db $16
-dh b
-dl b
+dh c
+dl c
 ENDM
 
 MACRO stop_playing
 db $17
 ENDM
 
-MACRO duty_cycle b
-db $18, b<<6
+MACRO duty_cycle c
+db $18, c<<6
 ENDM
 
-MACRO rest b
-if b&1
-c = $20
-ELSEIF b&2
-c = $40
-ELSEIF b&4
-c = $60
-ELSEIF b&8
-c = $80
-ELSEIF b&16
-c = $a0
-ELSEIF b&32
-c = $c0
-ELSEIF b&64
-c = $e0
+MACRO rest c
+IF c&1
+d = $20
+ELSEIF c&2
+d = $40
+ELSEIF c&4
+d = $60
+ELSEIF c&8
+d = $80
+ELSEIF c&16
+d = $a0
+ELSEIF c&32
+d = $c0
+ELSEIF c&64
+d = $e0
 ELSE
-error "invaild note length"
+error "Invaild note length"
 ENDIF
-db c
+db d
 ENDM
