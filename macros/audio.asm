@@ -3,39 +3,38 @@ db 0
 ENDM
 
 a = channel_flags
-b = current_base_note
 
-MACRO channel_1 c
+MACRO channel_1 b
 IF a&1
-dh c
-dl c
+dh b
+dl b
 ELSE
 db 0, 0
 ENDIF
 ENDM
 
-MACRO channel_2 c
+MACRO channel_2 b
 IF a&2
-dh c
-dl c
+dh b
+dl b
 ELSE
 db 0, 0
 ENDIF
 ENDM
 
-MACRO channel_3 c
+MACRO channel_3 b
 IF a&4
-dh c
-dl c
+dh b
+dl b
 ELSE
 db 0, 0
 ENDIF
 ENDM
 
-MACRO channel_4 c
+MACRO channel_4 b
 IF a&8
-dh c
-dl c
+dh b
+dl b
 ELSE
 db 0, 0
 ENDIF
@@ -57,137 +56,137 @@ MACRO octave_jump
 db 3
 ENDM
 
-MACRO flags c
-db 4, c
+MACRO flags b
+db 4, b
 ENDM
 
-MACRO tempo c
+MACRO tempo b
 db 5
-dh c
-dl c
+dh b
+dl b
 ENDM
 
-MACRO note_sustain_length c
-db 6, c
+MACRO note_sustain_length b
+db 6, b
 ENDM
 
-MACRO volume c
-db 7, c
+MACRO volume b
+db 7, b
 ENDM
 
-MACRO instrument c
-db 8, c
+MACRO instrument b
+db 8, b
 ENDM
 
-MACRO octave c
-db 9, c
+MACRO octave b
+db 9, b
 ENDM
 
-MACRO global_transpose c
-db $a, c
+MACRO global_transpose b
+db $a, b
 ENDM
 
-MACRO channel_transpose c
-db $c, d
+MACRO channel_transpose b
+db $b, b
 ENDM
 
-MACRO pitch_tune c
-db $c, c
+MACRO pitch_tune b
+db $c, b
 ENDM
 
-MACRO pitch_slide c
-db $d, c
+MACRO pitch_slide b
+db $d, b
 ENDM
 
-MACRO loop1 c, d
+MACRO loop1 b, c
 db $e
-db d
-dh c
-dl c
+db c
+dh b
+dl b
 ENDM
 
-MACRO loop2 c, d
+MACRO loop2 b, c
 db $f
-db d
-dh c
-dl c
+db c
+dh b
+dl b
 ENDM
 
-MACRO loop3 c, d
+MACRO loop3 b, c
 db $10
-db d
-dh c
-dl c
+db c
+dh b
+dl b
 ENDM
 
-MACRO loop4 c, d
+MACRO loop4 b, c
 db $11
-db d
-dh c
-dl c
+db c
+dh b
+dl b
 ENDM
 
-MACRO break1 c, d
+MACRO break1 b, c
 db $12
-db d
-dh c
-dl c
+db c
+dh b
+dl b
 ENDM
 
-MACRO break2 c, d
+MACRO break2 b, c
 db $13
-db d
-dh c
-dl c
+db c
+dh b
+dl b
 ENDM
 
-MACRO break3 c, d
+MACRO break3 b, c
 db $14
-db d
-dh c
-dl c
+db c
+dh b
+dl b
 ENDM
 
-MACRO break4 c, d
+MACRO break4 b, c
 db $15
-db d
-dh c
-dl c
+db c
+dh b
+dl b
 ENDM
 
-MACRO jump c
+MACRO jump b
 db $16
-dh c
-dl c
+dh b
+dl b
 ENDM
 
 MACRO stop_playing
 db $17
 ENDM
 
-MACRO duty_cycle c
-db $18, c<<6
+MACRO duty_cycle b
+db $18, b<<6
 ENDM
 
-MACRO rest c
-IF c&1
-d = $20
-ELSEIF c&2
-d = $40
-ELSEIF c&4
-d = $60
-ELSEIF c&8
-d = $80
-ELSEIF c&16
-d = $a0
-ELSEIF c&32
-d = $c0
-ELSEIF c&64
-d = $e0
+MACRO rest b
+IF b&1
+c = $20
+ELSEIF b&2
+c = $40
+ELSEIF b&4
+c = $60
+ELSEIF b&8
+c = $80
+ELSEIF b&16
+c = $a0
+ELSEIF b&32
+c = $c0
+ELSEIF b&64
+c = $e0
 ELSE
 error "Invaild note length"
 ENDIF
-db d
+db c
 ENDM
 
 ;note_value_table
@@ -295,28 +294,30 @@ A_7 = $5d
 A#7 = $5e
 B_7 = $5f
 
-MACRO note c, d
-IF c < b
+MACRO note b, c
+IF b < current_base_note
 error "Note is out of range"
-ELSEIF c - b > $1e
+ELSEIF b - current_base_note > $1e
 error "Note is out of range"
+ELSE
+d = b - current_base_note
 ENDIF
-IF d&1
+IF c&1
 e = $21
-ELSEIF d&2
+ELSEIF c&2
 e = $41
-ELSEIF d&4
+ELSEIF c&4
 e = $61
-ELSEIF d&8
+ELSEIF c&8
 e = $81
-ELSEIF d&16
+ELSEIF c&16
 e = $a1
-ELSEIF d&32
+ELSEIF c&32
 e = $c1
-ELSEIF d&64
+ELSEIF c&64
 e = $e1
 ELSE
 error "Invaild note length"
 ENDIF
-db c - b + e
+db d + e
 ENDM
