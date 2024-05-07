@@ -297,10 +297,10 @@ B_7 = $5f
 MACRO note b, c
 IF b < current_base_note
 error "Note is out of range"
-ELSEIF b - current_base_note > $1e
+ELSEIF b-current_base_note > $1e
 error "Note is out of range"
 ELSE
-d = b - current_base_note
+d = b-current_base_note
 ENDIF
 IF c&1
 e = $21
@@ -319,5 +319,5 @@ e = $e1
 ELSE
 error "Invaild note length"
 ENDIF
-db d + e
+db d+e
 ENDM
