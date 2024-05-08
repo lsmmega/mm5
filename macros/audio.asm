@@ -321,3 +321,24 @@ error "Invaild note length"
 ENDIF
 db d+e
 ENDM
+
+MACRO noise_note b, c
+IF c&1
+d = $21
+ELSEIF c&2
+d = $41
+ELSEIF c&4
+d = $61
+ELSEIF c&8
+d = $81
+ELSEIF c&16
+d = $a1
+ELSEIF c&32
+d = $c1
+ELSEIF c&64
+d = $e1
+ELSE
+error "Invaild note length"
+ENDIF
+db b+d
+ENDM
