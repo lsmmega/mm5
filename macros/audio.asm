@@ -100,58 +100,58 @@ ENDM
 
 MACRO loop1 b, c
 	db $e
-	db c
 	dh b
 	dl b
+	db c
 ENDM
 
 MACRO loop2 b, c
 	db $f
-	db c
 	dh b
 	dl b
+	db c
 ENDM
 
 MACRO loop3 b, c
 	db $10
-	db c
 	dh b
 	dl b
+	db c
 ENDM
 
 MACRO loop4 b, c
 	db $11
-	db c
 	dh b
 	dl b
+	db c
 ENDM
 
 MACRO break1 b, c
 	db $12
-	db c
 	dh b
 	dl b
+	db c
 ENDM
 
 MACRO break2 b, c
 	db $13
-	db c
 	dh b
 	dl b
+	db c
 ENDM
 
 MACRO break3 b, c
 	db $14
-	db c
 	dh b
 	dl b
+	db c
 ENDM
 
 MACRO break4 b, c
 	db $15
-	db c
 	dh b
 	dl b
+	db c
 ENDM
 
 MACRO jump b
@@ -323,6 +323,11 @@ MACRO note b, c
 ENDM
 
 MACRO noise_note b, c
+	IF b<1
+		error "Noise note is out of range"
+	ELSEIF b>$1e
+		error "Noise note is out of range"
+	ENDIF
 	IF c&1
 		d = $21
 	ELSEIF c&2
