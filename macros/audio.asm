@@ -1,192 +1,192 @@
 MACRO music_pointers
-db 0
+	db 0
 ENDM
 
 a = channel_flags
 
 MACRO channel_1 b
-IF a&1
-dh b
-dl b
-ELSE
-db 0, 0
-ENDIF
+	IF a&1
+		dh b
+		dl b
+	ELSE
+		db 0, 0
+	ENDIF
 ENDM
 
 MACRO channel_2 b
-IF a&2
-dh b
-dl b
-ELSE
-db 0, 0
-ENDIF
+	IF a&2
+		dh b
+		dl b
+	ELSE
+		db 0, 0
+	ENDIF
 ENDM
 
 MACRO channel_3 b
-IF a&4
-dh b
-dl b
-ELSE
-db 0, 0
-ENDIF
+	IF a&4
+		dh b
+		dl b
+	ELSE
+		db 0, 0
+	ENDIF
 ENDM
 
 MACRO channel_4 b
-IF a&8
-dh b
-dl b
-ELSE
-db 0, 0
-ENDIF
+	IF a&8
+		dh b
+		dl b
+	ELSE
+		db 0, 0
+	ENDIF
 ENDM
 
 MACRO triplet_set
-db 0
+	db 0
 ENDM
 
 MACRO connect_set
-db 1
+	db 1
 ENDM
 
 MACRO dotted_set
-db 2
+	db 2
 ENDM
 
 MACRO octave_jump
-db 3
+	db 3
 ENDM
 
 MACRO flags b
-db 4, b
+	db 4, b
 ENDM
 
 MACRO tempo b
-db 5
-dh b
-dl b
+	db 5
+	dh b
+	dl b
 ENDM
 
 MACRO note_sustain_length b
-db 6, b
+	db 6, b
 ENDM
 
 MACRO volume b
-db 7, b
+	db 7, b
 ENDM
 
 MACRO instrument b
-db 8, b
+	db 8, b
 ENDM
 
 MACRO octave b
-db 9, b
+	db 9, b
 ENDM
 
 MACRO global_transpose b
-db $a, b
+	db $a, b
 ENDM
 
 MACRO channel_transpose b
-db $b, b
+	db $b, b
 ENDM
 
 MACRO pitch_tune b
-db $c, b
+	db $c, b
 ENDM
 
 MACRO pitch_slide b
-db $d, b
+	db $d, b
 ENDM
 
 MACRO loop1 b, c
-db $e
-db c
-dh b
-dl b
+	db $e
+	db c
+	dh b
+	dl b
 ENDM
 
 MACRO loop2 b, c
-db $f
-db c
-dh b
-dl b
+	db $f
+	db c
+	dh b
+	dl b
 ENDM
 
 MACRO loop3 b, c
-db $10
-db c
-dh b
-dl b
+	db $10
+	db c
+	dh b
+	dl b
 ENDM
 
 MACRO loop4 b, c
-db $11
-db c
-dh b
-dl b
+	db $11
+	db c
+	dh b
+	dl b
 ENDM
 
 MACRO break1 b, c
-db $12
-db c
-dh b
-dl b
+	db $12
+	db c
+	dh b
+	dl b
 ENDM
 
 MACRO break2 b, c
-db $13
-db c
-dh b
-dl b
+	db $13
+	db c
+	dh b
+	dl b
 ENDM
 
 MACRO break3 b, c
-db $14
-db c
-dh b
-dl b
+	db $14
+	db c
+	dh b
+	dl b
 ENDM
 
 MACRO break4 b, c
-db $15
-db c
-dh b
-dl b
+	db $15
+	db c
+	dh b
+	dl b
 ENDM
 
 MACRO jump b
-db $16
-dh b
-dl b
+	db $16
+	dh b
+	dl b
 ENDM
 
 MACRO stop_playing
-db $17
+	db $17
 ENDM
 
 MACRO duty_cycle b
-db $18, b<<6
+	db $18, b<<6
 ENDM
 
 MACRO rest b
-IF b&1
-c = $20
-ELSEIF b&2
-c = $40
-ELSEIF b&4
-c = $60
-ELSEIF b&8
-c = $80
-ELSEIF b&16
-c = $a0
-ELSEIF b&32
-c = $c0
-ELSEIF b&64
-c = $e0
-ELSE
-error "Invaild note length"
-ENDIF
-db c
+	IF b&1
+		c = $20
+	ELSEIF b&2
+		c = $40
+	ELSEIF b&4
+		c = $60
+	ELSEIF b&8
+		c = $80
+	ELSEIF b&16
+		c = $a0
+	ELSEIF b&32
+		c = $c0
+	ELSEIF b&64
+		c = $e0
+	ELSE
+		error "Invaild note length"
+	ENDIF
+	db c
 ENDM
 
 ;note_value_table
@@ -295,50 +295,50 @@ A#7 = $5e
 B_7 = $5f
 
 MACRO note b, c
-IF b < current_base_note
-error "Note is out of range"
-ELSEIF b-current_base_note > $1e
-error "Note is out of range"
-ELSE
-d = b-current_base_note
-ENDIF
-IF c&1
-e = $21
-ELSEIF c&2
-e = $41
-ELSEIF c&4
-e = $61
-ELSEIF c&8
-e = $81
-ELSEIF c&16
-e = $a1
-ELSEIF c&32
-e = $c1
-ELSEIF c&64
-e = $e1
-ELSE
-error "Invaild note length"
-ENDIF
-db d+e
+	IF b < current_base_note
+		error "Note is out of range"
+	ELSEIF b-current_base_note > $1e
+		error "Note is out of range"
+	ELSE
+		d = b-current_base_note
+	ENDIF
+	IF c&1
+		e = $21
+	ELSEIF c&2
+		e = $41
+	ELSEIF c&4
+		e = $61
+	ELSEIF c&8
+		e = $81
+	ELSEIF c&16
+		e = $a1
+	ELSEIF c&32
+		e = $c1
+	ELSEIF c&64
+		e = $e1
+	ELSE
+		error "Invaild note length"
+	ENDIF
+		db d+e
 ENDM
 
 MACRO noise_note b, c
-IF c&1
-d = $21
-ELSEIF c&2
-d = $41
-ELSEIF c&4
-d = $61
-ELSEIF c&8
-d = $81
-ELSEIF c&16
-d = $a1
-ELSEIF c&32
-d = $c1
-ELSEIF c&64
-d = $e1
-ELSE
-error "Invaild note length"
-ENDIF
-db b+d
+	IF c&1
+		d = $21
+	ELSEIF c&2
+		d = $41
+	ELSEIF c&4
+		d = $61
+	ELSEIF c&8
+		d = $81
+	ELSEIF c&16
+		d = $a1
+	ELSEIF c&32
+		d = $c1
+	ELSEIF c&64
+		d = $e1
+	ELSE
+		error "Invaild note length"
+	ENDIF
+	db b+d
 ENDM
