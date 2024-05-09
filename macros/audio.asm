@@ -100,58 +100,58 @@ ENDM
 
 MACRO loop1 b, c
 	db $e
-	dh b
-	dl b
-	db c
+	db b
+	dh c
+	dl c
 ENDM
 
 MACRO loop2 b, c
 	db $f
-	dh b
-	dl b
-	db c
+	db b
+	dh c
+	dl c
 ENDM
 
 MACRO loop3 b, c
 	db $10
-	dh b
-	dl b
-	db c
+	db b
+	dh c
+	dl c
 ENDM
 
 MACRO loop4 b, c
 	db $11
-	dh b
-	dl b
-	db c
+	db b
+	dh c
+	dl c
 ENDM
 
 MACRO break1 b, c
 	db $12
-	dh b
-	dl b
-	db c
+	db b
+	dh c
+	dl c
 ENDM
 
 MACRO break2 b, c
 	db $13
-	dh b
-	dl b
-	db c
+	db b
+	dh c
+	dl c
 ENDM
 
 MACRO break3 b, c
 	db $14
-	dh b
-	dl b
-	db c
+	db b
+	dh c
+	dl c
 ENDM
 
 MACRO break4 b, c
 	db $15
-	dh b
-	dl b
-	db c
+	db b
+	dh c
+	dl c
 ENDM
 
 MACRO jump b
