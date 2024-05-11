@@ -184,7 +184,7 @@ MACRO rest b
 	ELSEIF b&64
 		c = $e0
 	ELSE
-		error "Invaild note length"
+		error "Invalid note length"
 	ENDIF
 	db c
 ENDM
@@ -317,7 +317,7 @@ MACRO note b, c
 	ELSEIF c&64
 		e = $e1
 	ELSE
-		error "Invaild note length"
+		error "Invalid note length"
 	ENDIF
 		db d+e
 ENDM
@@ -343,7 +343,7 @@ MACRO noise_note b, c
 	ELSEIF c&64
 		d = $e1
 	ELSE
-		error "Invaild note length"
+		error "Invalid note length"
 	ENDIF
 	db b+d
 ENDM
