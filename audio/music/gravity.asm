@@ -5,10 +5,10 @@ music_gravity:
 	channel_2, music_gravity_pulse2
 	channel_3, music_gravity_triangle
 	channel_4, music_gravity_noise
-	
+
 music_gravity_pulse1:
 	tempo $01d8
-	
+
 music_gravity_pulse1_loop1:
 	flags $00
 	rest, 16
@@ -83,7 +83,7 @@ music_gravity_pulse1_loop1:
 	note F_3, 4
 	note F#3, 4
 	loop1 1, music_gravity_pulse1_loop1
-	
+
 music_gravity_pulse1_break1:
 	rest, 8
 	duty_cycle 1
@@ -107,7 +107,7 @@ music_gravity_pulse1_break1:
 
 music_gravity_pulse1_main_loop:
 	flags $00
-	
+
 music_gravity_pulse1_loop2:
 	flags $00
 	instrument $02
@@ -179,7 +179,7 @@ music_gravity_pulse1_loop2:
 	connect_set
 	note C#4, 32
 	loop1 1, music_gravity_pulse1_loop2
-	
+
 music_gravity_pulse1_loop3:
 	flags $48
 	instrument $02
@@ -258,7 +258,7 @@ music_gravity_pulse1_loop3:
 	note G#4, 8
 	rest, 4
 	loop1 1, music_gravity_pulse1_loop3
-	
+
 music_gravity_pulse1_break2:
 	note D#4, 16
 	note G#4, 16
@@ -426,7 +426,7 @@ music_gravity_pulse1_break2:
 	volume $9
 	jump music_gravity_pulse1_main_loop
 	stop_playing
-	
+
 music_gravity_pulse2:
 music_gravity_pulse2_loop1:
 	flags $00
@@ -506,7 +506,7 @@ music_gravity_pulse2_loop1:
 	note E_4, 4
 	note F_4, 4
 	loop1 1, music_gravity_pulse2_loop1
-	
+
 music_gravity_pulse2_break1:
 	rest, 8
 	octave 2
@@ -526,13 +526,13 @@ music_gravity_pulse2_break1:
 	dotted_set
 	connect_set
 	note E_4, 16
-	
+
 music_gravity_pulse2_main_loop:
 	flags $00
-	
+
 music_gravity_pulse2_loop3:
 	flags $00
-	
+
 music_gravity_pulse2_loop2:
 	flags $00
 	octave 2
@@ -653,7 +653,7 @@ music_gravity_pulse2_break2:
 	note C#4, 8
 	note B_3, 8
 	loop2 1, music_gravity_pulse2_loop3
-	
+
 music_gravity_pulse2_break3:
 	note C#3, 16
 	rest, 8
@@ -661,10 +661,10 @@ music_gravity_pulse2_break3:
 	note F#3, 8
 	note G#3, 8
 	note C#4, 8
-	
+
 music_gravity_pulse2_loop5:
 	flags $00
-	
+
 music_gravity_pulse2_loop4:
 	flags $00
 	rest, 8
@@ -702,7 +702,7 @@ music_gravity_pulse2_loop4:
 	note G#3, 4
 	note D#4, 4
 	loop1 2, music_gravity_pulse2_loop4
-	
+
 music_gravity_pulse2_break4:
 	rest, 8
 	note F#2, 4
@@ -751,7 +751,7 @@ music_gravity_pulse2_break4:
 	note G#3, 4
 	note C#4, 4
 	loop2 1, music_gravity_pulse2_loop5
-	
+
 music_gravity_pulse2_break5:
 	rest, 8
 	note D#2, 4
@@ -916,7 +916,7 @@ music_gravity_pulse2_break5:
 	note B_3, 4
 	jump music_gravity_pulse2_main_loop
 	stop_playing
-	
+
 music_gravity_triangle:
 music_gravity_triangle_loop1:
 	flags $00
@@ -979,7 +979,7 @@ music_gravity_triangle_loop1:
 	note E_4, 4
 	note A_4, 4
 	loop1 1, music_gravity_triangle_loop1
-	
+
 music_gravity_triangle_break1:
 	note B_3, 8
 	rest, 16
@@ -992,13 +992,13 @@ music_gravity_triangle_break1:
 	note C_5, 4
 	note G_4, 4
 	note D#4, 4
-	
+
 music_gravity_triangle_main_loop:
 	flags $00
-	
+
 music_gravity_triangle_loop4:
 	flags $00
-	
+
 music_gravity_triangle_loop2:
 	flags $00
 	instrument $00
@@ -1017,7 +1017,7 @@ music_gravity_triangle_loop2:
 	note C#4, 8
 	note F#3, 8
 	loop1 1, music_gravity_triangle_loop2
-	
+
 music_gravity_triangle_loop3:
 	flags $00
 	note B_3, 8
@@ -1085,11 +1085,11 @@ music_gravity_triangle_loop3:
 	note C#4, 4
 	rest, 4
 	loop2 1, music_gravity_triangle_loop4
-	
+
 music_gravity_triangle_loop6:
 	flags $00
 	note_sustain_length $f5
-	
+
 music_gravity_triangle_loop5:
 	flags $00
 	note D_3, 16
@@ -1109,7 +1109,7 @@ music_gravity_triangle_loop5:
 	note D#4, 4
 	rest, 4
 	loop1 2, music_gravity_triangle_loop5
-	
+
 music_gravity_triangle_break2:
 	note G_3, 16
 	rest, 8
@@ -1133,7 +1133,7 @@ music_gravity_triangle_break2:
 	note C#4, 4
 	rest, 4
 	loop2 1, music_gravity_triangle_loop6
-	
+
 music_gravity_triangle_break3:
 	note G#3, 16
 	rest, 8
@@ -1145,7 +1145,7 @@ music_gravity_triangle_break3:
 	rest, 4
 	note G#4, 4
 	note C#3, 4
-	
+
 music_gravity_triangle_loop7:
 	flags $00
 	rest, 4
@@ -1185,7 +1185,7 @@ music_gravity_triangle_loop7:
 	octave 3
 	jump music_gravity_triangle_main_loop
 	stop_playing
-	
+
 music_gravity_noise:
 music_gravity_noise_loop1:
 	flags $00
@@ -1224,7 +1224,7 @@ music_gravity_noise_loop1:
 	noise_note 7, 4
 	loop1 1, music_gravity_noise_loop1
 	noise_note 7, 4
-	
+
 music_gravity_noise_loop2:
 	flags $00
 	volume $8
@@ -1244,7 +1244,7 @@ music_gravity_noise_loop2:
 	break1 0, music_gravity_noise_break1
 	rest, 4
 	loop1 1, music_gravity_noise_loop2
-	
+
 music_gravity_noise_break1:
 	dotted_set
 	noise_note 2, 8
@@ -1257,10 +1257,10 @@ music_gravity_noise_break1:
 	noise_note 7, 4
 	noise_note 14, 4
 	noise_note 14, 4
-	
+
 music_gravity_noise_main_loop:
 	flags $00
-	
+
 music_gravity_noise_loop3:
 	flags $00
 	noise_note 2, 4
@@ -1285,7 +1285,7 @@ music_gravity_noise_loop3:
 	noise_note 14, 4
 	volume $9
 	loop1 15, music_gravity_noise_loop3
-	
+
 music_gravity_noise_loop4:
 	flags $00
 	noise_note 2, 4
@@ -1307,7 +1307,7 @@ music_gravity_noise_loop4:
 	noise_note 14, 4
 	noise_note 14, 4
 	loop1 15, music_gravity_noise_loop4
-	
+
 music_gravity_noise_loop5:
 	flags $00
 	volume $8
@@ -1353,7 +1353,7 @@ music_gravity_noise_loop5:
 	noise_note 14, 4
 	noise_note 7, 4
 	loop1 3, music_gravity_noise_loop5
-	
+
 music_gravity_noise_break2:
 	noise_note 7, 4
 	volume $c
