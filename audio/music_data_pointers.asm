@@ -1,10 +1,10 @@
 ;audio_total
 	db (audio_data_end-audio_data_start)/2
-	
+
 ;instruments_pointers
 	dh instruments_pointers
 	dl instruments_pointers
-	
+
 ;music
 	audio_data_start
 	dh music_gravity
@@ -53,7 +53,7 @@
 	dl music_all_stage_clear
 	dh music_last_boss
 	dl music_last_boss
-	
+
 ;sfx
 	dh sfx_lighting
 	dl sfx_lighting
@@ -103,13 +103,13 @@
 	dl sfx_teleport_in
 	dh sfx_password_wrong
 	dl sfx_password_wrong
-	
+
 ;music
 	dh music_fake_proto_whistle
 	dl music_fake_proto_whistle
 	dh music_proto_whistle
 	dl music_proto_whistle
-	
+
 ;sfx
 	dh sfx_lift_up
 	dl sfx_lift_up
@@ -159,13 +159,13 @@
 	dl sfx_dachone_walking
 	dh sfx_dachone_shoot
 	dl sfx_dachone_shoot
-	
+
 ;music
 	dh music_title
 	dl music_title
 	dh music_escape
 	dl music_escape
-	
+
 ;sfx
 	dh sfx_get_weapon_energy
 	dl sfx_get_weapon_energy
