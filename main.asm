@@ -1,5 +1,5 @@
-incsrc .\scirpts\ines.asm
-incsrc .\scirpts\audio.asm
+incsrc .\scripts\ines.asm
+incsrc .\scripts\audio.asm
 incsrc header.asm
 incsrc definitions.asm
 bank = 0
