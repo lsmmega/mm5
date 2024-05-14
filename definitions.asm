@@ -115,7 +115,7 @@
 	song_time_low = $c8
 	song_speed_high = $c9
 	song_spedd_low = $ca
-	global_transpose = $cb
+	song_global_transpose = $cb
 	sf_channels_playing = $cc
 	current_track_bit = $cf
 	sf_pointer = $d0
