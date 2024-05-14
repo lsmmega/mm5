@@ -117,7 +117,7 @@ music_stone_pulse1_loop1:
 	note F#3, 4
 	note G#3, 4
 	note F#3, 4
-	break1 8, music_stone_pulse1_break1
+	break1 $08, music_stone_pulse1_break1
 	rest, 4
 	note F_3, 4
 	connect_set
@@ -182,7 +182,7 @@ music_stone_pulse1_loop2:
 	octave_jump
 	current_base_note = $24
 	note G#3, 4
-	break1 8, music_stone_pulse1_break2
+	break1 $08, music_stone_pulse1_break2
 	note A#3, 8
 	rest, 8
 	instrument $16
@@ -339,7 +339,7 @@ music_stone_pulse2_loop1:
 	note A#4, 4
 	note A#4, 4
 	note A#4, 4
-	break1 8, music_stone_pulse2_break1
+	break1 $08, music_stone_pulse2_break1
 	rest, 4
 	note A#4, 4
 	note A#5, 4
@@ -443,7 +443,7 @@ music_stone_pulse2_loop3:
 	note D#3, 8
 	rest, 8
 	rest, 16
-	break1 0, music_stone_pulse2_break2
+	break1 $00, music_stone_pulse2_break2
 	octave_jump
 	current_base_note = $24
 	note G_3, 8
@@ -621,7 +621,7 @@ music_stone_triangle_loop1:
 	rest, 4
 	note B_2, 8
 	note C#3, 4
-	break1 0, music_stone_triangle_break1
+	break1 $00, music_stone_triangle_break1
 	dotted_set
 	note B_2, 8
 	note B_2, 4
@@ -704,7 +704,7 @@ music_stone_triangle_loop2:
 	octave_jump
 	current_base_note = $24
 	note G#3, 4
-	break1 8, music_stone_triangle_break2
+	break1 $08, music_stone_triangle_break2
 	dotted_set
 	note D#3, 8
 	note D#3, 4
@@ -939,7 +939,7 @@ music_stone_noise_loop3:
 	noise_note 14, 4
 	volume $b
 	noise_note 7, 8
-	break1 0, music_stone_noise_break1
+	break1 $00, music_stone_noise_break1
 	noise_note 14, 4
 	noise_note 14, 4
 	loop1 1, music_stone_noise_loop3
@@ -991,7 +991,7 @@ music_stone_noise_loop6:
 	noise_note 7, 8
 	noise_note 14, 4
 	noise_note 14, 4
-	break2 0, music_stone_noise_break2
+	break2 $00, music_stone_noise_break2
 	loop1 1, music_stone_noise_loop6
 	loop2 1, music_stone_noise_loop7
 

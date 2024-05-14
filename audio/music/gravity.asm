@@ -46,7 +46,7 @@ music_gravity_pulse1_loop1:
 	octave_jump
 	current_base_note = $18
 	note B_3, 4
-	break1 0, music_gravity_pulse1_break1
+	break1 $00, music_gravity_pulse1_break1
 	note F#3, 4
 	dotted_set
 	rest, 8
@@ -250,7 +250,7 @@ music_gravity_pulse1_loop3:
 	current_base_note = $30
 	note G#4, 32
 	note F#4, 16
-	break1 8, music_gravity_pulse1_break2
+	break1 $08, music_gravity_pulse1_break2
 	note D#4, 16
 	note F_4, 16
 	note F#4, 16
@@ -465,7 +465,7 @@ music_gravity_pulse2_loop1:
 	note C_5, 4
 	note G_5, 4
 	note F#5, 4
-	break1 8, music_gravity_pulse2_break1
+	break1 $08, music_gravity_pulse2_break1
 	octave_jump
 	current_base_note = $24
 	note B_4, 4
@@ -555,7 +555,7 @@ music_gravity_pulse2_loop2:
 	rest, 8
 	note F#3, 4
 	note F#4, 4
-	break1 0, music_gravity_pulse2_break2
+	break1 $00, music_gravity_pulse2_break2
 	octave_jump
 	current_base_note = $30
 	note G#4, 4
@@ -636,7 +636,7 @@ music_gravity_pulse2_break2:
 	note D#3, 16
 	note C#3, 16
 	note C_3, 8
-	break2 0, music_gravity_pulse2_break3
+	break2 $00, music_gravity_pulse2_break3
 	note C#3, 4
 	rest, 4
 	duty_cycle 0
@@ -685,7 +685,7 @@ music_gravity_pulse2_loop4:
 	note G#3, 4
 	note A_3, 4
 	note D_4, 4
-	break1 0, music_gravity_pulse2_break4
+	break1 $00, music_gravity_pulse2_break4
 	rest, 8
 	note F#2, 4
 	note G#2, 4
@@ -734,7 +734,7 @@ music_gravity_pulse2_break4:
 	note F#3, 4
 	note G#3, 4
 	note D#4, 4
-	break2 0, music_gravity_pulse2_break5
+	break2 $00, music_gravity_pulse2_break5
 	rest, 8
 	note C#2, 4
 	note F_2, 4
@@ -953,7 +953,7 @@ music_gravity_triangle_loop1:
 	note C_4, 4
 	note A_3, 4
 	note E_3, 4
-	break1 0, music_gravity_triangle_break1
+	break1 $00, music_gravity_triangle_break1
 	note F#3, 4
 	note F#3, 4
 	note F#3, 4
@@ -1097,7 +1097,7 @@ music_gravity_triangle_loop5:
 	note D_3, 32
 	rest, 4
 	note D_4, 4
-	break1 0, music_gravity_triangle_break2
+	break1 $00, music_gravity_triangle_break2
 	note D#3, 16
 	rest, 8
 	note D#3, 8
@@ -1121,7 +1121,7 @@ music_gravity_triangle_break2:
 	note G#3, 32
 	rest, 4
 	note C#4, 4
-	break2 0, music_gravity_triangle_break3
+	break2 $00, music_gravity_triangle_break3
 	note C#3, 16
 	rest, 8
 	note C#3, 8
@@ -1241,7 +1241,7 @@ music_gravity_noise_loop2:
 	noise_note 4, 8
 	noise_note 14, 4
 	noise_note 14, 4
-	break1 0, music_gravity_noise_break1
+	break1 $00, music_gravity_noise_break1
 	rest, 4
 	loop1 1, music_gravity_noise_loop2
 
@@ -1344,7 +1344,7 @@ music_gravity_noise_loop5:
 	noise_note 2, 4
 	noise_note 14, 4
 	noise_note 2, 4
-	break1 0, music_gravity_noise_break2
+	break1 $00, music_gravity_noise_break2
 	noise_note 14, 4
 	noise_note 2, 4
 	volume $b
