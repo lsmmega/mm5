@@ -2,39 +2,37 @@ MACRO music_pointers
 	db 0
 ENDM
 
-a = channel_flags
+MACRO channel_1 a
+	IF channel_flags&1
+		dh a
+		dl a
+	ELSE
+		db 0, 0
+	ENDIF
+ENDM
 
-MACRO channel_1 b
-	IF a&1
-		dh b
+MACRO channel_2 a
+	IF channel_flags&2
+		dh a
 		dl b
 	ELSE
 		db 0, 0
 	ENDIF
 ENDM
 
-MACRO channel_2 b
-	IF a&2
-		dh b
-		dl b
+MACRO channel_3 a
+	IF channel_flags&4
+		dh a
+		dl a
 	ELSE
 		db 0, 0
 	ENDIF
 ENDM
 
-MACRO channel_3 b
-	IF a&4
-		dh b
-		dl b
-	ELSE
-		db 0, 0
-	ENDIF
-ENDM
-
-MACRO channel_4 b
-	IF a&8
-		dh b
-		dl b
+MACRO channel_4 a
+	IF channel_flags&8
+		dh a
+		dl a
 	ELSE
 		db 0, 0
 	ENDIF
@@ -56,137 +54,137 @@ MACRO octave_jump
 	db 3
 ENDM
 
-MACRO flags b
-	db 4, b
+MACRO flags a
+	db 4, a
 ENDM
 
-MACRO tempo b
+MACRO tempo a
 	db 5
-	dh b
-	dl b
+	dh a
+	dl a
 ENDM
 
-MACRO note_sustain_length b
-	db 6, b
+MACRO note_sustain_length a
+	db 6, a
 ENDM
 
-MACRO volume b
-	db 7, b
+MACRO volume a
+	db 7, a
 ENDM
 
-MACRO instrument b
-	db 8, b
+MACRO instrument a
+	db 8, a
 ENDM
 
-MACRO octave b
-	db 9, b
+MACRO octave a
+	db 9, a
 ENDM
 
-MACRO global_transpose b
-	db $a, b
+MACRO global_transpose a
+	db $a, a
 ENDM
 
-MACRO channel_transpose b
-	db $b, b
+MACRO channel_transpose a
+	db $b, a
 ENDM
 
-MACRO pitch_tune b
-	db $c, b
+MACRO pitch_tune a
+	db $c, a
 ENDM
 
-MACRO pitch_slide b
-	db $d, b
+MACRO pitch_slide a
+	db $d, a
 ENDM
 
-MACRO loop1 b, c
+MACRO loop1 a, b
 	db $e
-	db b
-	dh c
-	dl c
-ENDM
-
-MACRO loop2 b, c
-	db $f
-	db b
-	dh c
-	dl c
-ENDM
-
-MACRO loop3 b, c
-	db $10
-	db b
-	dh c
-	dl c
-ENDM
-
-MACRO loop4 b, c
-	db $11
-	db b
-	dh c
-	dl c
-ENDM
-
-MACRO break1 b, c
-	db $12
-	db b
-	dh c
-	dl c
-ENDM
-
-MACRO break2 b, c
-	db $13
-	db b
-	dh c
-	dl c
-ENDM
-
-MACRO break3 b, c
-	db $14
-	db b
-	dh c
-	dl c
-ENDM
-
-MACRO break4 b, c
-	db $15
-	db b
-	dh c
-	dl c
-ENDM
-
-MACRO jump b
-	db $16
+	db a
 	dh b
 	dl b
+ENDM
+
+MACRO loop2 a, b
+	db $f
+	db a
+	dh b
+	dl b
+ENDM
+
+MACRO loop3 a, b
+	db $10
+	db a
+	dh b
+	dl b
+ENDM
+
+MACRO loop4 a, b
+	db $11
+	db a
+	dh b
+	dl b
+ENDM
+
+MACRO break1 a, b
+	db $12
+	db a
+	dh b
+	dl b
+ENDM
+
+MACRO break2 a, b
+	db $13
+	db a
+	dh b
+	dl b
+ENDM
+
+MACRO break3 a, b
+	db $14
+	db a
+	dh b
+	dl b
+ENDM
+
+MACRO break4 a, b
+	db $15
+	db a
+	dh b
+	dl b
+ENDM
+
+MACRO jump a
+	db $16
+	dh a
+	dl a
 ENDM
 
 MACRO stop_playing
 	db $17
 ENDM
 
-MACRO duty_cycle b
-	db $18, b<<6
+MACRO duty_cycle a
+	db $18, a<<6
 ENDM
 
-MACRO rest b
-	IF b&1
-		c = $20
-	ELSEIF b&2
-		c = $40
-	ELSEIF b&4
-		c = $60
-	ELSEIF b&8
-		c = $80
-	ELSEIF b&16
-		c = $a0
-	ELSEIF b&32
-		c = $c0
-	ELSEIF b&64
-		c = $e0
+MACRO rest a
+	IF a&1
+		b = $20
+	ELSEIF a&2
+		b = $40
+	ELSEIF a&4
+		b = $60
+	ELSEIF a&8
+		b = $80
+	ELSEIF a&16
+		b = $a0
+	ELSEIF a&32
+		b = $c0
+	ELSEIF a&64
+		b = $e0
 	ELSE
 		error "Invalid note length"
 	ENDIF
-	db c
+	db b
 ENDM
 
 ;note_value_table
@@ -294,56 +292,56 @@ ENDM
 	A#7 = $5e
 	B_7 = $5f
 
-MACRO note b, c
-	IF b < current_base_note
+MACRO note a, b
+	IF a < current_base_note
 		error "Note is out of range"
-	ELSEIF b-current_base_note > $1e
+	ELSEIF a-current_base_note > $1e
 		error "Note is out of range"
 	ELSE
-		d = b-current_base_note
+		c = a-current_base_note
 	ENDIF
-	IF c&1
-		e = $21
-	ELSEIF c&2
-		e = $41
-	ELSEIF c&4
-		e = $61
-	ELSEIF c&8
-		e = $81
-	ELSEIF c&16
-		e = $a1
-	ELSEIF c&32
-		e = $c1
-	ELSEIF c&64
-		e = $e1
-	ELSE
-		error "Invalid note length"
-	ENDIF
-		db d+e
-ENDM
-
-MACRO noise_note b, c
-	IF b<1
-		error "Noise note is out of range"
-	ELSEIF b>$1e
-		error "Noise note is out of range"
-	ENDIF
-	IF c&1
+	IF b&1
 		d = $21
-	ELSEIF c&2
+	ELSEIF b&2
 		d = $41
-	ELSEIF c&4
+	ELSEIF b&4
 		d = $61
-	ELSEIF c&8
+	ELSEIF b&8
 		d = $81
-	ELSEIF c&16
+	ELSEIF b&16
 		d = $a1
-	ELSEIF c&32
+	ELSEIF b&32
 		d = $c1
-	ELSEIF c&64
+	ELSEIF b&64
 		d = $e1
 	ELSE
 		error "Invalid note length"
 	ENDIF
-	db b+d
+		db c+d
+ENDM
+
+MACRO noise_note a, b
+	IF a<1
+		error "Noise note is out of range"
+	ELSEIF a>$1e
+		error "Noise note is out of range"
+	ENDIF
+	IF b&1
+		c = $21
+	ELSEIF b&2
+		c = $41
+	ELSEIF b&4
+		c = $61
+	ELSEIF b&8
+		c = $81
+	ELSEIF b&16
+		c = $a1
+	ELSEIF b&32
+		c = $c1
+	ELSEIF b&64
+		c = $e1
+	ELSE
+		error "Invalid note length"
+	ENDIF
+	db a+c
 ENDM
