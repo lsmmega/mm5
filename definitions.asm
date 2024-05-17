@@ -225,8 +225,10 @@
 	noise_high = $400f
 	dmc_freq = $4010
 	apu_status = $4015
+	apu_frame_counter = $4017 ;write
+	joy2_frame = $4017 ;read
 
-;mmc3_registers
+;mm5_mmc3_registers
 	bank_select = $8000
 	bank_data = $8001
 	mmc3_mirroring = $a000

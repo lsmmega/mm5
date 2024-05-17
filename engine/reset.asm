@@ -4,7 +4,7 @@ reset:
 	lda #$08
 	sta ppu_ctrl
 	lda #$40
-	sta $4017
+	sta apu_frame_counter
 	lda #$00
 	stx ppu_mask
 	stx dmc_freq

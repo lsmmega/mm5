@@ -65,8 +65,8 @@
 	dl sfx_shoot
 	dh sfx_landing
 	dl sfx_landing
-	dh sfx_damgae_mm
-	dl sfx_damgae_mm
+	dh sfx_damage_mm
+	dl sfx_damage_mm
 	dh sfx_death
 	dl sfx_death
 	dh sfx_shoot_recoil
