@@ -69,9 +69,7 @@ MACRO note_sustain_length a
 ENDM
 
 MACRO volume a
-	IF a < 0
-		error "Invalid volume"
-	ELSEIF a > $f
+	IF a < 0 || a > $f
 		error "Invalid volume"
 	ELSE
 		db 7, a
@@ -83,9 +81,7 @@ MACRO instrument a
 ENDM
 
 MACRO octave a
-	IF a < 0
-		error "Invalid octave"
-	ELSEIF a > 7
+	IF a < 0 || a > 7
 		error "Invalid octave"
 	ELSE
 		db 9, a
@@ -109,31 +105,47 @@ MACRO pitch_slide a
 ENDM
 
 MACRO loop1 a, b
-	db $e
-	db a
-	dh b
-	dl b
+	IF a
+		db $e
+		db a
+		dh b
+		dl b
+	ELSE
+		error "Please use jump command"
+	ENDIF
 ENDM
 
 MACRO loop2 a, b
-	db $f
-	db a
-	dh b
-	dl b
+	IF a
+		db $e
+		db a
+		dh b
+		dl b
+	ELSE
+		error "Please use jump command"
+	ENDIF
 ENDM
 
 MACRO loop3 a, b
-	db $10
-	db a
-	dh b
-	dl b
+	IF a
+		db $e
+		db a
+		dh b
+		dl b
+	ELSE
+		error "Please use jump command"
+	ENDIF
 ENDM
 
 MACRO loop4 a, b
-	db $11
-	db a
-	dh b
-	dl b
+	IF a
+		db $e
+		db a
+		dh b
+		dl b
+	ELSE
+		error "Please use jump command"
+	ENDIF
 ENDM
 
 MACRO break1 a, b
@@ -305,9 +317,7 @@ ENDM
 	B_7 = $5f
 
 MACRO note a, b
-	IF a < current_base_note
-		error "Note is out of range"
-	ELSEIF a-current_base_note > $1e
+	IF a-current_base_note < 0 || a-current_base_note > $1e
 		error "Note is out of range"
 	ELSE
 		c = a-current_base_note
@@ -333,9 +343,7 @@ MACRO note a, b
 ENDM
 
 MACRO noise_note a, b
-	IF a<1
-		error "Noise note is out of range"
-	ELSEIF a>$1e
+	IF a < 0 || a > $1e
 		error "Noise note is out of range"
 	ENDIF
 	IF b == 1
