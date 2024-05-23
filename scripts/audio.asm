@@ -182,7 +182,7 @@ MACRO jump a
 	dl a
 ENDM
 
-MACRO stop_playing
+MACRO channel_end
 	db $17
 ENDM
 
