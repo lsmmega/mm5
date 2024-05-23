@@ -425,7 +425,7 @@ music_gravity_pulse1_break2:
 	duty_cycle 1
 	volume $9
 	jump music_gravity_pulse1_main_loop
-	stop_playing
+	channel_end
 
 music_gravity_pulse2:
 music_gravity_pulse2_loop1:
@@ -915,7 +915,7 @@ music_gravity_pulse2_break5:
 	connect_set
 	note B_3, 4
 	jump music_gravity_pulse2_main_loop
-	stop_playing
+	channel_end
 
 music_gravity_triangle:
 music_gravity_triangle_loop1:
@@ -1184,7 +1184,7 @@ music_gravity_triangle_loop7:
 	loop1 3, music_gravity_triangle_loop7
 	octave 3
 	jump music_gravity_triangle_main_loop
-	stop_playing
+	channel_end
 
 music_gravity_noise:
 music_gravity_noise_loop1:
@@ -1363,4 +1363,4 @@ music_gravity_noise_break2:
 	noise_note 7, 4
 	noise_note 7, 4
 	jump music_gravity_noise_main_loop
-	stop_playing
+	channel_end
