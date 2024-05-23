@@ -228,7 +228,7 @@ music_star_pulse1_break1:
 	note B_4, 8
 	note A#4, 8
 	jump music_star_pulse1_main_loop
-	stop_playing
+	channel_end
 
 music_star_pulse2:
 music_star_pulse2_main_loop:
@@ -520,7 +520,7 @@ music_star_pulse2_break2:
 	note C#5, 8
 	note C_5, 8
 	jump music_star_pulse2_main_loop
-	stop_playing
+	channel_end
 
 music_star_triangle:
 music_star_triangle_main_loop:
@@ -629,7 +629,7 @@ music_star_triangle_loop3:
 	note_sustain_length $f0
 	note A_2, 64
 	jump music_star_triangle_main_loop
-	stop_playing
+	channel_end
 
 music_star_noise:
 music_star_noise_main_loop:
@@ -734,4 +734,4 @@ music_star_noise_loop4:
 	noise_note 9, 16
 	noise_note 9, 16
 	jump music_star_noise_main_loop
-	stop_playing
+	channel_end
