@@ -1,10 +1,13 @@
 music_star:
 	music_pointers
-	channel_flags = $f
-	channel_1, music_star_pulse1
-	channel_2, music_star_pulse2
-	channel_3, music_star_triangle
-	channel_4, music_star_noise
+	dh music_star_pulse1
+	dl music_star_pulse1
+	dh music_star_pulse2
+	dl music_star_pulse2
+	dh music_star_triangle
+	dl music_star_triangle
+	dh music_star_noise
+	dl music_star_noise
 
 music_star_pulse1:
 	tempo $0200
