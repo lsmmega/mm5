@@ -1,10 +1,13 @@
 music_stone:
 	music_pointers
-	channel_flags = $f
-	channel_1, music_stone_pulse1
-	channel_2, music_stone_pulse2
-	channel_3, music_stone_triangle
-	channel_4, music_stone_noise
+	dh music_stone_pulse1
+	dl music_stone_pulse1
+	dh music_stone_pulse2
+	dl music_stone_pulse2
+	dh music_stone_triangle
+	dl music_stone_triangle
+	dh music_stone_noise
+	dl music_stone_noise
 
 music_stone_pulse1:
 	tempo $01b6
