@@ -1,10 +1,13 @@
 music_wave:
 	music_pointers
-	channel_flags = $f
-	channel_1, music_wave_pulse1
-	channel_2, music_wave_pulse2
-	channel_3, music_wave_triangle
-	channel_4, music_wave_noise
+	dh music_wave_pulse1
+	dl music_wave_pulse1
+	dh music_wave_pulse2
+	dl music_wave_pulse2
+	dh music_wave_triangle
+	dl music_wave_triangle
+	dh music_wave_noise
+	dl music_wave_noise
 
 music_wave_pulse1:
 	tempo $01c7
