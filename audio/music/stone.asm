@@ -293,7 +293,7 @@ music_stone_pulse1_break2:
 	dotted_set
 	note D_4, 8
 	jump music_stone_pulse1_main_loop
-	stop_playing
+	channel_end
 
 music_stone_pulse2:
 	note_sustain_length $d2
@@ -558,7 +558,7 @@ music_stone_pulse2_break2:
 	note B_3, 8
 	duty_cycle 0
 	jump music_stone_pulse2_main_loop
-	stop_playing
+	channel_end
 
 music_stone_triangle:
 	note_sustain_length $d2
@@ -829,7 +829,7 @@ music_stone_triangle_break2:
 	dotted_set
 	rest, 8
 	jump music_stone_triangle_main_loop
-	stop_playing
+	channel_end
 
 music_stone_noise:
 	instrument $14
@@ -1006,4 +1006,4 @@ music_stone_noise_break2:
 	noise_note 7, 4
 	noise_note 7, 4
 	jump music_stone_noise_main_loop
-	stop_playing
+	channel_end
