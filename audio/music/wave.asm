@@ -236,7 +236,7 @@ music_wave_pulse1_break3:
 	rest, 2
 	pitch_slide $00
 	jump music_wave_pulse1_main_loop
-	stop_playing
+	channel_end
 	
 music_wave_pulse2:
 music_wave_pulse2_loop1:
@@ -570,7 +570,7 @@ music_wave_pulse2_loop5:
 	rest, 8
 	note F#3, 16
 	jump music_wave_pulse2_main_loop
-	stop_playing
+	channel_end
 
 music_wave_triangle:
 music_wave_triangle_loop3:
@@ -824,7 +824,7 @@ music_wave_triangle_loop11:
 	note D_3, 16
 	octave 3
 	jump music_wave_triangle_main_loop
-	stop_playing
+	channel_end
 
 music_wave_noise:
 	instrument $14
@@ -944,4 +944,4 @@ music_wave_noise_loop5:
 	noise_note 14, 4
 	loop2 1, music_wave_noise_loop6
 	jump music_wave_noise_main_loop
-	stop_playing
+	channel_end
