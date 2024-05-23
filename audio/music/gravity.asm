@@ -1,10 +1,13 @@
 music_gravity:
 	music_pointers
-	channel_flags = $f
-	channel_1, music_gravity_pulse1
-	channel_2, music_gravity_pulse2
-	channel_3, music_gravity_triangle
-	channel_4, music_gravity_noise
+	dh music_gravity_pulse1
+	dl music_gravity_pulse1
+	dh music_gravity_pulse2
+	dl music_gravity_pulse2
+	dh music_gravity_triangle
+	dl music_gravity_triangle
+	dh music_gravity_noise
+	dl music_gravity_noise
 
 music_gravity_pulse1:
 	tempo $01d8
