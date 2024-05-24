@@ -143,6 +143,7 @@ music_stone_pulse1_loop1:
 	loop1 1, music_stone_pulse1_loop1
 
 music_stone_pulse1_break1:
+	current_base_note = $24
 	dotted_set
 	note A#3, 16
 	connect_set
@@ -227,6 +228,7 @@ music_stone_pulse1_loop2:
 	loop1 1, music_stone_pulse1_loop2
 
 music_stone_pulse1_break2:
+	current_base_note = $24
 	dotted_set
 	note A#3, 16
 	note_sustain_length $ff
@@ -358,6 +360,7 @@ music_stone_pulse2_loop1:
 	loop1 3, music_stone_pulse2_loop1
 
 music_stone_pulse2_break1:
+	current_base_note = $30
 	rest, 8
 	duty_cycle 1
 	instrument $01
@@ -485,6 +488,7 @@ music_stone_pulse2_loop3:
 	loop1 1, music_stone_pulse2_loop3
 
 music_stone_pulse2_break2:
+	current_base_note = $0c
 	dotted_set
 	note F#3, 16
 	note C#3, 8
@@ -692,6 +696,7 @@ music_stone_triangle_break1:
 
 music_stone_triangle_loop2:
 	flags $00
+	current_base_note = $0c
 	dotted_set
 	note B_2, 8
 	note B_2, 4

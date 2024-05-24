@@ -93,6 +93,7 @@ music_gravity_pulse1_break1:
 	instrument $02
 	note_sustain_length $e6
 	volume $9
+	current_base_note = $18
 	note D#4, 4
 	note C#4, 4
 	note D#4, 4
@@ -263,6 +264,7 @@ music_gravity_pulse1_loop3:
 	loop1 1, music_gravity_pulse1_loop3
 
 music_gravity_pulse1_break2:
+	current_base_note = $30
 	note D#4, 16
 	note G#4, 16
 	note A#4, 16
@@ -543,6 +545,7 @@ music_gravity_pulse2_loop2:
 	volume $8
 	note_sustain_length $3c
 	duty_cycle 2
+	current_base_note = $18
 	note F#4, 4
 	note F#4, 4
 	note F#3, 4
@@ -658,6 +661,7 @@ music_gravity_pulse2_break2:
 	loop2 1, music_gravity_pulse2_loop3
 
 music_gravity_pulse2_break3:
+	current_base_note = $18
 	note C#3, 16
 	rest, 8
 	note F_3, 16
@@ -674,6 +678,7 @@ music_gravity_pulse2_loop4:
 	instrument $12
 	volume $9
 	note_sustain_length $96
+	current_base_note = $18
 	note G#2, 4
 	note A_2, 4
 	note D_3, 4
@@ -707,6 +712,7 @@ music_gravity_pulse2_loop4:
 	loop1 2, music_gravity_pulse2_loop4
 
 music_gravity_pulse2_break4:
+	current_base_note = $18
 	rest, 8
 	note F#2, 4
 	note G_2, 4
@@ -756,6 +762,7 @@ music_gravity_pulse2_break4:
 	loop2 1, music_gravity_pulse2_loop5
 
 music_gravity_pulse2_break5:
+	current_base_note = $18
 	rest, 8
 	note D#2, 4
 	note G#2, 4
@@ -984,6 +991,7 @@ music_gravity_triangle_loop1:
 	loop1 1, music_gravity_triangle_loop1
 
 music_gravity_triangle_break1:
+	current_base_note = $24
 	note B_3, 8
 	rest, 16
 	dotted_set
@@ -1006,6 +1014,7 @@ music_gravity_triangle_loop2:
 	flags $00
 	instrument $00
 	note_sustain_length $6e
+	current_base_note = $24
 	note F#3, 8
 	note E_3, 8
 	note_sustain_length $fa
@@ -1023,6 +1032,7 @@ music_gravity_triangle_loop2:
 
 music_gravity_triangle_loop3:
 	flags $00
+	current_base_note = $24
 	note B_3, 8
 	note A_3, 8
 	note_sustain_length $fa
@@ -1095,6 +1105,7 @@ music_gravity_triangle_loop6:
 
 music_gravity_triangle_loop5:
 	flags $00
+	current_base_note = $24
 	note D_3, 16
 	rest, 8
 	note D_3, 32
@@ -1114,6 +1125,7 @@ music_gravity_triangle_loop5:
 	loop1 2, music_gravity_triangle_loop5
 
 music_gravity_triangle_break2:
+	current_base_note = $24
 	note G_3, 16
 	rest, 8
 	note G_3, 32
@@ -1138,6 +1150,7 @@ music_gravity_triangle_break2:
 	loop2 1, music_gravity_triangle_loop6
 
 music_gravity_triangle_break3:
+	current_base_note = $24
 	note G#3, 16
 	rest, 8
 	note G#3, 8

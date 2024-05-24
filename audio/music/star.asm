@@ -190,6 +190,7 @@ music_star_pulse1_loop2:
 	loop1 1, music_star_pulse1_loop2
 
 music_star_pulse1_break1:
+	current_base_note = $1f
 	dotted_set
 	note F_4, 16
 	note G_4, 4
@@ -484,6 +485,7 @@ music_star_pulse2_loop3:
 	loop2 1, music_star_pulse2_loop4
 
 music_star_pulse2_break2:
+	current_base_note = $1f
 	dotted_set
 	note C#4, 16
 	note D#4, 4
@@ -554,6 +556,7 @@ music_star_triangle_loop1:
 	loop1 5, music_star_triangle_loop1
 
 music_star_triangle_break1:
+	current_base_note = $1f
 	dotted_set
 	note C#3, 8
 	note G#3, 4
@@ -581,6 +584,7 @@ music_star_triangle_break1:
 music_star_triangle_loop2:
 	flags $00
 	note_sustain_length $dc
+	current_base_note = $1f
 	dotted_set
 	note A_2, 8
 	note E_3, 4
@@ -605,6 +609,7 @@ music_star_triangle_loop2:
 
 music_star_triangle_loop3:
 	flags $00
+	current_base_note = $1f
 	dotted_set
 	note D#3, 8
 	note D#4, 4

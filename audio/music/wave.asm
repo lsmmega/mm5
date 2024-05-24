@@ -99,6 +99,7 @@ music_wave_pulse1_loop2:
 	loop1 1, music_wave_pulse1_loop2
 
 music_wave_pulse1_break1:
+	current_base_note = $24
 	rest, 8
 	note A_4, 8
 	connect_set
@@ -109,6 +110,7 @@ music_wave_pulse1_break1:
 
 music_wave_pulse1_loop4:
 	flags $08
+	current_base_note = $24
 	dotted_set
 	note F_4, 8
 	note E_4, 16
@@ -116,6 +118,7 @@ music_wave_pulse1_loop4:
 
 music_wave_pulse1_loop3:
 	flags $08
+	current_base_note = $24
 	note D#4, 1
 	connect_set
 	note E_4, 8
@@ -142,6 +145,7 @@ music_wave_pulse1_loop3:
 	loop2 1, music_wave_pulse1_loop4
 
 music_wave_pulse1_break2:
+	current_base_note = $24
 	note D_4, 64
 	rest, 8
 	note G_4, 4
@@ -155,6 +159,7 @@ music_wave_pulse1_break2:
 
 music_wave_pulse1_loop5:
 	flags $08
+	current_base_note = $24
 	note F#4, 64
 	dotted_set
 	note F#4, 8
@@ -182,6 +187,7 @@ music_wave_pulse1_loop5:
 	loop1 1, music_wave_pulse1_loop5
 
 music_wave_pulse1_break3:
+	current_base_note = $24
 	connect_set
 	note E_4, 32
 	octave 2
@@ -379,6 +385,7 @@ music_wave_pulse2_loop2:
 	loop1 1, music_wave_pulse2_loop2
 
 music_wave_pulse2_break1:
+	current_base_note = $24
 	note C_3, 8
 	octave_jump
 	current_base_note = $0c
@@ -412,6 +419,7 @@ music_wave_pulse2_loop3:
 	flags $08
 	note_sustain_length $f0
 	instrument $05
+	current_base_note = $24
 	dotted_set
 	note D_4, 8
 	note C_4, 16
@@ -492,7 +500,8 @@ music_wave_pulse2_loop6:
 	flags $08
 
 music_wave_pulse2_loop4:
-	flags $08	
+	flags $08
+	current_base_note = $24
 	note B_3, 8
 	note E_3, 4
 	note G_3, 8
@@ -506,6 +515,7 @@ music_wave_pulse2_loop4:
 
 music_wave_pulse2_loop5:
 	flags $08
+	current_base_note = $24
 	note C#4, 8
 	note E_3, 4
 	note G_3, 8
@@ -595,6 +605,7 @@ music_wave_triangle_loop1:
 
 music_wave_triangle_loop2:
 	flags $00
+	current_base_note = $24
 	dotted_set
 	note F_3, 8
 	note C_4, 4
@@ -618,6 +629,7 @@ music_wave_triangle_loop6:
 
 music_wave_triangle_loop4:
 	flags $00
+	current_base_note = $24
 	dotted_set
 	note G_3, 8
 	note D_4, 4
@@ -629,6 +641,7 @@ music_wave_triangle_loop4:
 
 music_wave_triangle_loop5:
 	flags $00
+	current_base_note = $24
 	dotted_set
 	note F_3, 8
 	note C_4, 4
@@ -645,6 +658,7 @@ music_wave_triangle_loop5:
 	loop2 1, music_wave_triangle_loop6
 
 music_wave_triangle_break1:
+	current_base_note = $24
 	dotted_set
 	note C_4, 8
 	note G_4, 4
@@ -674,6 +688,7 @@ music_wave_triangle_loop9:
 
 music_wave_triangle_loop7:
 	flags $00
+	current_base_note = $24
 	dotted_set
 	note A#3, 8
 	note F_4, 4
@@ -685,6 +700,7 @@ music_wave_triangle_loop7:
 
 music_wave_triangle_loop8:
 	flags $00
+	current_base_note = $24
 	dotted_set
 	note A_3, 8
 	note E_4, 4
@@ -748,6 +764,7 @@ music_wave_triangle_loop12:
 music_wave_triangle_loop10:
 	flags $00
 	note_sustain_length $e6
+	current_base_note = $18
 	dotted_set
 	note E_3, 8
 	dotted_set
@@ -759,6 +776,7 @@ music_wave_triangle_loop10:
 
 music_wave_triangle_loop11:
 	flags $00
+	current_base_note = $18
 	dotted_set
 	note A_3, 8
 	dotted_set
