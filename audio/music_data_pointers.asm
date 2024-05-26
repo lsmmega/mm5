@@ -107,8 +107,8 @@
 ;music
 	dh music_fake_proto_whistle
 	dl music_fake_proto_whistle
-	dh music_proto_whistle
-	dl music_proto_whistle
+	dh music_proto_whistle_mm5
+	dl music_proto_whistle_mm5
 
 ;sfx
 	dh sfx_lift_up
@@ -153,8 +153,8 @@
 	dl sfx_gravity
 	dh sfx_sumatran
 	dl sfx_sumatran
-	dh sfx_unused72
-	dl sfx_unused72
+	dh sfx_unused46
+	dl sfx_unused46
 	dh sfx_dachone_walking
 	dl sfx_dachone_walking
 	dh sfx_dachone_shoot

@@ -1,7 +1,10 @@
+incsrc .\definitions\mm5_mmc3_registers.asm
+incsrc .\definitions\mm5_ram.asm
+incsrc .\definitions\nes_registers.asm
+incsrc .\definitions\track.asm
 incsrc .\scripts\ines.asm
 incsrc .\scripts\audio.asm
 incsrc header.asm
-incsrc definitions.asm
 prg_bank = 0
 base $8000
 pad $a000
