@@ -658,7 +658,7 @@ music_gyro_triangle_loop2:
 	note C#4, 4
 	octave 0
 	current_base_note = $04
-	note G_0, 4 ;A#3
+	note A#3_, 4
 	octave 1
 	instrument $00
 	current_base_note = $10
@@ -671,7 +671,7 @@ music_gyro_triangle_loop2:
 	instrument $15
 	octave 0
 	current_base_note = $04
-	note G_0, 4 ;A#3
+	note A#3_, 4
 	octave 1
 	octave_jump
 	current_base_note = $28
@@ -681,8 +681,8 @@ music_gyro_triangle_loop2:
 	octave 0
 	octave_jump
 	current_base_note = $04
-	note G_0, 4 ;A#3
-	note G_0, 4 ;A#3
+	note A#3_, 4
+	note A#3_, 4
 	octave 1
 	octave_jump
 	current_base_note = $28
@@ -850,7 +850,7 @@ music_gyro_triangle_loop7:
 	octave 0
 	octave_jump
 	current_base_note = $04
-	note G_0, 4 ;A#3
+	note A#3_, 4
 	instrument $00
 	octave 1
 	octave_jump
