@@ -97,8 +97,8 @@
 	dl sfx_damage_boss
 	dh sfx_destroy_enemy
 	dl sfx_destroy_enemy
-	dh sfx_drill_bomb
-	dl sfx_drill_bomb
+	dh sfx_crush
+	dl sfx_crush
 	dh sfx_teleport_in
 	dl sfx_teleport_in
 	dh sfx_password_wrong
@@ -107,8 +107,8 @@
 ;music
 	dh music_fake_proto_whistle
 	dl music_fake_proto_whistle
-	dh music_proto_whistle_mm5
-	dl music_proto_whistle_mm5
+	dh music_proto_whistle
+	dl music_proto_whistle
 
 ;sfx
 	dh sfx_lift_up
