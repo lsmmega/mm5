@@ -43,7 +43,7 @@
 	sfx_open_menu = #$29
 	sfx_damage_boss = #$2a
 	sfx_destroy_enemy = #$2b
-	sfx_crush = #$2c
+	sfx_explosion = #$2c
 	sfx_teleport_in = #$2d
 	sfx_password_wrong = #$2e
 	music_fake_proto_whistle = #$2f
