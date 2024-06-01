@@ -97,8 +97,8 @@
 	dl sfx_damage_boss
 	dh sfx_destroy_enemy
 	dl sfx_destroy_enemy
-	dh sfx_crush
-	dl sfx_crush
+	dh sfx_explosion
+	dl sfx_explosion
 	dh sfx_teleport_in
 	dl sfx_teleport_in
 	dh sfx_password_wrong
