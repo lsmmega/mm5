@@ -6,17 +6,18 @@ sfx_ufo:
 	sfx_global_note_sustain_length $ff
 	sfx_frames $0a
 	sfx_channel_flags $6
-	sfx_channel_command_flags $17
-	sfx_channel_command_flags_bits = $17
-	sfx_channel_instrument $3b
-	sfx_channel_duty_cycle 0
-	sfx_channel_volume $f
-	sfx_channel_pitch_tune $07
+	sfx_channel_flags_bits = $6
+	sfx_pulse2_command_flags $17
+	sfx_pulse2_command_flags_bits = $17
+	sfx_pulse2_instrument $3b
+	sfx_pulse2_duty_cycle 0
+	sfx_pulse2_volume $f
+	sfx_pulse2_pitch_tune $07
 	sfx_note D#7
-	sfx_channel_command_flags $05
-	sfx_channel_command_flags_bits = $05
-	sfx_channel_instrument $3b
-	sfx_channel_volume $ff
+	sfx_noise_command_flags $05
+	sfx_noise_command_flags_bits = $05
+	sfx_noise_instrument $3b
+	sfx_noise_volume $ff
 	sfx_note D#6
 
 ;2
@@ -25,11 +26,12 @@ sfx_ufo:
     sfx_global_note_sustain_length $ff
     sfx_frames $0a
     sfx_channel_flags $6
-	sfx_channel_command_flags $00
-    sfx_channel_command_flags_bits = $00
+	sfx_channel_flags_bits = $6
+	sfx_pulse2_command_flags $00
+    sfx_pulse2_command_flags_bits = $00
 	sfx_note D#7
-	sfx_channel_command_flags $04
-	sfx_channel_command_flags_bits = $04
-	sfx_channel_volume $00
+	sfx_noise_command_flags $04
+	sfx_noise_command_flags_bits = $04
+	sfx_noise_volume $00
 	sfx_note D#6
 	sfx_end
