@@ -1,0 +1,27 @@
+sfx_routine_map:
+;1
+	sfx_priority $07
+	sfx_global_flags $2
+	sfx_global_flags_bits = $2
+	sfx_global_note_sustain_length $ff
+	sfx_frames $04
+	sfx_channel_flags $3
+	sfx_channel_command_flags $07
+	sfx_channel_command_flags_bits = $07
+	sfx_channel_instrument $45
+	sfx_channel_duty_cycle 1
+	sfx_channel_volume $f
+	sfx_note F#4
+	sfx_channel_command_flags $07
+	sfx_channel_command_flags_bits = $07
+	sfx_channel_instrument $32
+	sfx_channel_duty_cycle 2
+	sfx_channel_volume $f
+	sfx_note E_5
+
+;2
+	sfx_global_flags $0
+	sfx_global_flags_bits = $0
+	sfx_frames $00
+	sfx_channel_flags $0
+	sfx_end
