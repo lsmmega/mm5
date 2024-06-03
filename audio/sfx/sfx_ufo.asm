@@ -14,10 +14,10 @@ sfx_ufo:
 	sfx_pulse2_volume $f
 	sfx_pulse2_pitch_tune $07
 	sfx_note D#7
-	sfx_noise_command_flags $05
-	sfx_noise_command_flags_bits = $05
-	sfx_noise_instrument $3b
-	sfx_noise_volume $ff
+	sfx_triangle_command_flags $05
+	sfx_triangle_command_flags_bits = $05
+	sfx_triangle_instrument $3b
+	sfx_triangle_volume $ff
 	sfx_note D#6
 
 ;2
@@ -30,8 +30,8 @@ sfx_ufo:
 	sfx_pulse2_command_flags $00
     sfx_pulse2_command_flags_bits = $00
 	sfx_note D#7
-	sfx_noise_command_flags $04
-	sfx_noise_command_flags_bits = $04
-	sfx_noise_volume $00
+	sfx_triangle_command_flags $04
+	sfx_triangle_command_flags_bits = $04
+	sfx_triangle_volume $00
 	sfx_note D#6
 	sfx_end
