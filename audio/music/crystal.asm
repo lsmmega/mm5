@@ -537,7 +537,7 @@ music_crystal_triangle_loop1:
 	octave 0
 	current_base_note = $02
 	instrument $15
-	note G_0, 4
+	note A#3_, 4
 	octave 2
 	note_sustain_length $c8
 	rest, 4
@@ -554,7 +554,7 @@ music_crystal_triangle_loop1:
 	octave 0
 	instrument $15
 	current_base_note = $02
-	note G_0, 4
+	note A#3_, 4
 	octave 2
 	note_sustain_length $c8
 	octave_jump

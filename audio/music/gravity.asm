@@ -463,7 +463,7 @@ music_gravity_pulse2_loop1:
 	current_base_note = $3c
 	note B_5, 4
 	note F#6, 4
-	note F_6, 4
+	note E_6_, 4
 	note A#5, 4
 	note A_5, 4
 	note C#5, 4
@@ -874,7 +874,7 @@ music_gravity_pulse2_break5:
 	note F#6, 4
 	note F#6, 4
 	rest, 4
-	note F_6, 4
+	note E_6_, 4
 	note F_5, 4
 	note F_5, 4
 	rest, 4

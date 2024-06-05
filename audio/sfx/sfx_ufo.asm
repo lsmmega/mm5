@@ -13,7 +13,7 @@ sfx_ufo:
 	sfx_pulse2_duty_cycle 0
 	sfx_pulse2_volume $f
 	sfx_pulse2_pitch_tune $07
-	sfx_pulse2_note D#7
+	sfx_pulse2_note D_7_
 	sfx_triangle_command_flags $05
 	sfx_triangle_command_flags_bits = $05
 	sfx_triangle_instrument $3b
@@ -29,7 +29,7 @@ sfx_ufo:
 	sfx_channel_flags_bits = $6
 	sfx_pulse2_command_flags $00
 	sfx_pulse2_command_flags_bits = $00
-	sfx_pulse2_note D#7
+	sfx_pulse2_note D_7_
 	sfx_triangle_command_flags $04
 	sfx_triangle_command_flags_bits = $04
 	sfx_triangle_volume $00
