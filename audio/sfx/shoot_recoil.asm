@@ -16,7 +16,7 @@ sfx_shoot_recoil:
 	sfx_triangle_command_flags $0d
 	sfx_triangle_command_flags_bits = $0d
 	sfx_triangle_instrument $28
-	sfx_triangle_volume $af
+	sfx_triangle_fraction $af
 	sfx_triangle_pitch_slide $00
 	sfx_triangle_note A_7
 	sfx_end

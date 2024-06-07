@@ -17,7 +17,7 @@ sfx_ufo:
 	sfx_triangle_command_flags $05
 	sfx_triangle_command_flags_bits = $05
 	sfx_triangle_instrument $3b
-	sfx_triangle_volume $ff
+	sfx_triangle_fraction $ff
 	sfx_triangle_note D#6
 
 ;2
@@ -32,6 +32,6 @@ sfx_ufo:
 	sfx_pulse2_note D_7_
 	sfx_triangle_command_flags $04
 	sfx_triangle_command_flags_bits = $04
-	sfx_triangle_volume $00
+	sfx_triangle_fraction $00
 	sfx_triangle_note D#6
 	sfx_end

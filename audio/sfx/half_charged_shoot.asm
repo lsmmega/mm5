@@ -10,7 +10,7 @@ sfx_half_charged_shoot:
 	sfx_triangle_command_flags $05
 	sfx_triangle_command_flags_bits = $05
 	sfx_triangle_instrument $2b
-	sfx_triangle_volume $5
+	sfx_triangle_fraction $05
 	sfx_triangle_note C_2
 	sfx_noise_command_flags $0d
 	sfx_noise_command_flags_bits = $0d
@@ -29,7 +29,7 @@ sfx_half_charged_shoot:
 	sfx_triangle_command_flags $0d
 	sfx_triangle_command_flags_bits = $0d
 	sfx_triangle_instrument $44
-	sfx_triangle_volume $6
+	sfx_triangle_fraction $06
 	sfx_triangle_pitch_slide $7f
 	sfx_triangle_note D_3
 	sfx_noise_command_flags $0d
