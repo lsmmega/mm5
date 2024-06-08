@@ -12,7 +12,7 @@ sfx_damage_boss:
 	sfx_triangle_instrument $28
 	sfx_triangle_fraction $7d
 	sfx_triangle_pitch_slide $ff
-	sfx_triangle_note D#2
+	sfx_triangle_note F_1
 	sfx_noise_command_flags $0d
 	sfx_noise_command_flags_bits = $0d
 	sfx_noise_instrument $35
