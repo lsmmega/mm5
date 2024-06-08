@@ -15,7 +15,7 @@ sfx_boss_door_main_loop:
 	sfx_pulse2_duty_cycle 2
 	sfx_pulse2_volume $f
 	sfx_pulse2_pitch_slide $6e
-	sfx_pulse2_note 
+	sfx_pulse2_note D#7
 	sfx_noise_command_flags $0d
 	sfx_noise_command_flags_bits = $0d
 	sfx_noise_instrument $30
