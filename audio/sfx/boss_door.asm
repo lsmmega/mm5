@@ -10,7 +10,7 @@ sfx_boss_door_main_loop:
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a
 	sfx_pulse2_command_flags $0f
-	sfx_pulse2_command_flags_bits = $0
+	sfx_pulse2_command_flags_bits = $0f
 	sfx_pulse2_instrument $2c
 	sfx_pulse2_duty_cycle 2
 	sfx_pulse2_volume $f
