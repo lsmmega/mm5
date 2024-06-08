@@ -21,7 +21,7 @@ sfx_lift_up:
 	sfx_noise_note 7
 
 ;2
-sfx_lift_up_loop1:
+sfx_lift_up_main_loop:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
@@ -43,7 +43,7 @@ sfx_lift_up_loop1:
 ;3
 	sfx_global_flags $3
 	sfx_global_flags_bits = $3
-	sfx_global_loop 0, sfx_lift_up_loop1
+	sfx_global_loop 0, sfx_lift_up_main_loop
 	sfx_global_note_sustain_length $ff
 	sfx_frames $0a
 	sfx_channel_flags $0
