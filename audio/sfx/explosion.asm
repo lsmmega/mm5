@@ -27,6 +27,8 @@ sfx_explosion_main_loop:
 	sfx_global_note_sustain_length $90
 	sfx_frames $23
 	sfx_triangle_command_flags $05
+	sfx_channel_flags $c
+	sfx_channel_flags_bits = $c
 	sfx_triangle_command_flags_bits = $05
 	sfx_triangle_instrument $3e
 	sfx_triangle_fraction $39
