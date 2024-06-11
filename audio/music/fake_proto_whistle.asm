@@ -1,13 +1,13 @@
 music_fake_proto_whistle:
 	music_pointers
 	dh music_fake_proto_whistle_pulse1
-    dl music_fake_proto_whistle_pulse1
-    dh music_fake_proto_whistle_pulse2
-    dl music_fake_proto_whistle_pulse2
-    dh music_fake_proto_whistle_triangle
-    dl music_fake_proto_whistle_triangle
-    dh music_fake_proto_whistle_noise
-    dl music_fake_proto_whistle_noise
+	dl music_fake_proto_whistle_pulse1
+	dh music_fake_proto_whistle_pulse2
+	dl music_fake_proto_whistle_pulse2
+	dh music_fake_proto_whistle_triangle
+	dl music_fake_proto_whistle_triangle
+	dh music_fake_proto_whistle_noise
+	dl music_fake_proto_whistle_noise
 
 music_fake_proto_whistle_pulse1:
 	global_transpose $f5
