@@ -4,6 +4,7 @@ sfx_damage_boss:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $c8
+	sfx_global_transpose_note = $00
 	sfx_frames $1c
 	sfx_channel_flags $c
 	sfx_channel_flags_bits = $c

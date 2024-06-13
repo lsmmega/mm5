@@ -4,6 +4,7 @@ sfx_password_wrong:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $1f
 	sfx_channel_flags $6
 	sfx_channel_flags_bits = $6

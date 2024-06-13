@@ -4,6 +4,7 @@ sfx_destroy_enemy:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $e8
+	sfx_global_transpose_note = $00
 	sfx_frames $06
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a
@@ -25,6 +26,7 @@ sfx_destroy_enemy:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $d1
+	sfx_global_transpose_note = $00
 	sfx_frames $1c
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8

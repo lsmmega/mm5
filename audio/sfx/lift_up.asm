@@ -4,6 +4,7 @@ sfx_lift_up:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $64
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a
@@ -25,6 +26,7 @@ sfx_lift_up_main_loop:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $0a
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a
@@ -45,6 +47,7 @@ sfx_lift_up_main_loop:
 	sfx_global_flags_bits = $3
 	sfx_global_loop 0, sfx_lift_up_main_loop
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $0a
 	sfx_channel_flags $0
 	sfx_channel_flags_bits = $0

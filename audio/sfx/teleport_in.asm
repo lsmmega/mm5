@@ -4,6 +4,7 @@ sfx_teleport_in:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $06
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a
@@ -25,6 +26,7 @@ sfx_teleport_in:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $01
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2

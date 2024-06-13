@@ -4,6 +4,7 @@ sfx_routine_map:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $04
 	sfx_channel_flags $3
 	sfx_channel_flags_bits = $3
@@ -23,6 +24,7 @@ sfx_routine_map:
 ;2
 	sfx_global_flags $0
 	sfx_global_flags_bits = $0
+	sfx_global_transpose_note = $00
 	sfx_frames $00
 	sfx_channel_flags $0
 	sfx_channel_flags_bits = $0

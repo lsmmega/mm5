@@ -4,6 +4,7 @@ sfx_power_muscler:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $b3
+	sfx_global_transpose_note = $00
 	sfx_frames $04
 	sfx_channel_flags $e
 	sfx_channel_flags_bits = $e
@@ -27,8 +28,10 @@ sfx_power_muscler:
 	sfx_noise_note 6
 
 ;2
+	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $b3
+	sfx_global_transpose_note = $00
 	sfx_frames $04
 	sfx_channel_flags $e
 	sfx_channel_flags_bits = $e
@@ -38,7 +41,6 @@ sfx_power_muscler:
 	sfx_pulse2_note A_5
 	sfx_triangle_command_flags $0c
 	sfx_triangle_command_flags_bits = $0c
-	sfx_triangle_instrument $00
 	sfx_triangle_fraction $00
 	sfx_triangle_pitch_slide $7f
 	sfx_triangle_note C#2
@@ -47,8 +49,10 @@ sfx_power_muscler:
 	sfx_noise_note 7
 
 ;3
+	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $b4
+	sfx_global_transpose_note = $00
 	sfx_frames $04
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a

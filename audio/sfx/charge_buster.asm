@@ -4,6 +4,7 @@ sfx_charge_buster:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $08
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2
@@ -20,6 +21,7 @@ sfx_charge_buster:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $07
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2
@@ -31,6 +33,7 @@ sfx_charge_buster:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $07
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2
@@ -42,6 +45,7 @@ sfx_charge_buster:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $07
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2
@@ -53,6 +57,7 @@ sfx_charge_buster:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $07
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2
@@ -64,6 +69,7 @@ sfx_charge_buster:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $07
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2
@@ -75,6 +81,7 @@ sfx_charge_buster:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $07
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2
@@ -86,6 +93,7 @@ sfx_charge_buster:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $07
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2
@@ -98,6 +106,7 @@ sfx_charge_buster_main_loop:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
+	sfx_global_transpose_note = $00
 	sfx_frames $07
 	sfx_channel_flags $2
 	sfx_channel_flags_bits = $2
@@ -110,6 +119,7 @@ sfx_charge_buster_main_loop:
 	sfx_global_flags $1
 	sfx_global_flags_bits = $1
 	sfx_global_loop 0, sfx_charge_buster_main_loop
+	sfx_global_transpose_note = $00
 	sfx_frames $00
 	sfx_channel_flags $0
 	sfx_channel_flags_bits = $0

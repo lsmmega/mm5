@@ -4,6 +4,7 @@ sfx_lighting:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $90
+	sfx_global_transpose_note = $00
 	sfx_frames $03
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a
@@ -23,6 +24,7 @@ sfx_lighting:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $90
+	sfx_global_transpose_note = $00
 	sfx_frames $03
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a
@@ -36,7 +38,8 @@ sfx_lighting:
 ;3	
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
-	sfx_global_note_sustain_length $6C
+	sfx_global_note_sustain_length $6c
+	sfx_global_transpose_note = $00
 	sfx_frames $01
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a
@@ -53,6 +56,7 @@ sfx_lighting:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $90
+	sfx_global_transpose_note = $00
 	sfx_frames $02
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a
@@ -68,6 +72,7 @@ sfx_lighting:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $80
+	sfx_global_transpose_note = $00
 	sfx_frames $02
 	sfx_channel_flags $8
 	sfx_channel_flags_bits = $8
@@ -79,6 +84,7 @@ sfx_lighting:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $90
+	sfx_global_transpose_note = $00
 	sfx_frames $18
 	sfx_channel_flags $a
 	sfx_channel_flags_bits = $a

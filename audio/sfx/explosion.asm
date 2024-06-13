@@ -6,6 +6,7 @@ sfx_explosion_main_loop:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $e9
+	sfx_global_transpose_note = $00
 	sfx_frames $06
 	sfx_channel_flags $c
 	sfx_channel_flags_bits = $c
@@ -25,6 +26,7 @@ sfx_explosion_main_loop:
 	sfx_global_flags_bits = $3
 	sfx_global_loop 5, sfx_explosion_main_loop
 	sfx_global_note_sustain_length $90
+	sfx_global_transpose_note = $00
 	sfx_frames $23
 	sfx_triangle_command_flags $05
 	sfx_channel_flags $c
