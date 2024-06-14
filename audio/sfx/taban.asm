@@ -13,7 +13,7 @@ sfx_taban:
 	sfx_pulse2_instrument $40
 	sfx_pulse2_volume $d
 	sfx_pulse2_pitch_slide $7f
-	sfx_pulse2_note 
+	sfx_pulse2_note G_4
 	sfx_noise_command_flags $0d
 	sfx_noise_command_flags_bits = $0d
 	sfx_noise_instrument $2b
@@ -34,7 +34,7 @@ sfx_taban:
 	sfx_pulse2_instrument $40
 	sfx_pulse2_volume $d
 	sfx_pulse2_pitch_slide $2e
-	sfx_pulse2_note 
+	sfx_pulse2_note B_4
 	sfx_noise_command_flags $05
 	sfx_noise_command_flags_bits = $05
 	sfx_noise_instrument $2b
