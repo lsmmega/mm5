@@ -1,4 +1,4 @@
-sfx_gyro:
+sfx_gyro_attack:
 ;1
 	sfx_priority $07
 	sfx_global_flags $2
