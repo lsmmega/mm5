@@ -63,11 +63,11 @@
 	track_metallk1000 = #$3d
 	track_beat = #$3e
 	track_gravity_switch = #$3f
-	track_wave = #$40
-	track_gyro = #$41
+	track_water_wave = #$40
+	track_gyro_attack = #$41
 	track_charge_up = #$42
-	track_stone = #$43
-	track_gravity = #$44
+	track_power_stone = #$43
+	track_gravity_hold = #$44
 	track_sumatran = #$45
 	;track_unused46 = #$46
 	track_dachone_walking = #$47
