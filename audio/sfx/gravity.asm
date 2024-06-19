@@ -1,4 +1,4 @@
-sfx_gravity:
+sfx_gravity_hold:
 ;1
 	sfx_priority $09
 	sfx_global_flags $2
