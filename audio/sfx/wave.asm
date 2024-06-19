@@ -1,4 +1,4 @@
-sfx_wave:
+sfx_water_wave:
 ;1
 	sfx_priority $07
 	sfx_global_flags $2
