@@ -141,16 +141,16 @@
 	dl sfx_beat
 	dh sfx_gravity_switch
 	dl sfx_gravity_switch
-	dh sfx_wave
-	dl sfx_wave
-	dh sfx_gyro
-	dl sfx_gyro
+	dh sfx_water_wave
+	dl sfx_watet_wave
+	dh sfx_gyro_attack
+	dl sfx_gyro_attack
 	dh sfx_charge_up
 	dl sfx_charge_up
-	dh sfx_stone
-	dl sfx_stone
-	dh sfx_gravity
-	dl sfx_gravity
+	dh sfx_power_stone
+	dl sfx_power_stone
+	dh sfx_gravity_hold
+	dl sfx_gravity_hold
 	dh sfx_sumatran
 	dl sfx_sumatran
 	dh sfx_unused46
