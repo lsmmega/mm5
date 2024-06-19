@@ -35,7 +35,7 @@ sfx_taban:
 	sfx_noise_note 4
 
 ;3
-sfx_taban_main_loop:
+sfx_taban_loop1:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $ff
@@ -56,7 +56,7 @@ sfx_taban_main_loop:
 ;4
 	sfx_global_flags $3
 	sfx_global_flags_bits = $3
-	sfx_global_loop 2, sfx_taban_main_loop
+	sfx_global_loop 2, sfx_taban_loop1
 	sfx_global_note_sustain_length $ff
 	sfx_global_transpose_note = $00
 	sfx_frames $08
