@@ -1,4 +1,4 @@
-sfx_stone:
+sfx_power_stone:
 ;1
 	sfx_priority $09
 	sfx_global_flags $2
