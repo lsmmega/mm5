@@ -2,7 +2,7 @@ sfx_explosion:
 ;1
 	sfx_priority $09
 
-sfx_explosion_main_loop:
+sfx_explosion_loop1:
 	sfx_global_flags $2
 	sfx_global_flags_bits = $2
 	sfx_global_note_sustain_length $e9
@@ -24,7 +24,7 @@ sfx_explosion_main_loop:
 ;2
 	sfx_global_flags $3
 	sfx_global_flags_bits = $3
-	sfx_global_loop 5, sfx_explosion_main_loop
+	sfx_global_loop 5, sfx_explosion_loop1
 	sfx_global_note_sustain_length $90
 	sfx_global_transpose_note = $00
 	sfx_frames $23
