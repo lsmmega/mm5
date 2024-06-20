@@ -37,7 +37,7 @@
 	track_charge_kick = #$23
 	track_1up = #$24
 	track_boss_door = #$25
-	track_health_bar = #$26
+	track_gain_bar = #$26
 	track_change_weapon = #$27
 	track_close_menu = #$28
 	track_open_menu = #$29
