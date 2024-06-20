@@ -85,8 +85,8 @@
 	dl sfx_1up
 	dh sfx_boss_door
 	dl sfx_boss_door
-	dh sfx_health_bar
-	dl sfx_health_bar
+	dh sfx_gain_bar
+	dl sfx_gain_bar
 	dh sfx_change_weapon
 	dl sfx_change_weapon
 	dh sfx_close_menu
