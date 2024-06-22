@@ -72,7 +72,7 @@ sfx_dachone_walking:
 	sfx_pulse2_command_flags $08
 	sfx_pulse2_command_flags_bits = $08
 	sfx_pulse2_pitch_slide $ff
-	sfx_pulse2_note A#1
+	sfx_pulse2_note A_1
 	sfx_noise_command_flags $15
 	sfx_noise_command_flags_bits = $15
 	sfx_noise_instrument $34
