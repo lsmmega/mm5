@@ -1,6 +1,8 @@
 base $8000
-incsrc audio.asm
+;incsrc audio.asm
+pad $8a40
 incsrc track_data_pointers.asm
+pad $8adb
 incsrc instruments.asm
 incsrc .\music\gravity.asm
 incsrc .\music\stone.asm
@@ -10,11 +12,13 @@ incsrc .\music\crystal.asm
 incsrc .\music\gyro.asm
 incsrc .\music\charge.asm
 incsrc .\music\napalm.asm
-incsrc .\music\dark.asm
-incsrc .\music\wily.asm
+;incsrc .\music\dark.asm
+;incsrc .\music\wily.asm
+pad $b748
 incsrc .\music\boss.asm
-incsrc .\music\opening.asm
-incsrc .\music\ending.asm
+;incsrc .\music\opening.asm
+;incsrc .\music\ending.asm
+pad $c390
 incsrc .\music\stage_select.asm
 incsrc .\music\game_start.asm
 incsrc .\music\dark_map.asm
@@ -24,7 +28,8 @@ incsrc .\music\game_over.asm
 incsrc .\music\pass_word.asm
 incsrc .\music\get_weapon.asm
 incsrc .\music\all_stage_clear.asm
-incsrc .\music\last_boss.asm
+;incsrc .\music\last_boss.asm
+pad $cf93
 incsrc .\sfx\lighting.asm
 incsrc .\sfx\routine_map.asm
 incsrc .\sfx\ufo.asm
@@ -52,7 +57,7 @@ incsrc .\sfx\password_wrong.asm
 incsrc .\music\fake_proto_whistle.asm
 incsrc .\music\proto_whistle.asm
 incsrc .\sfx\lift_up.asm
-incsrc .\sfx\life_slow.asm
+incsrc .\sfx\lift_slow.asm
 incsrc .\sfx\train_1.asm
 incsrc .\sfx\train_2.asm
 incsrc .\sfx\teleport_out.asm
@@ -75,7 +80,8 @@ incsrc .\sfx\sumatran.asm
 incsrc .\unused\unused46.asm
 incsrc .\sfx\dachone_walking.asm
 incsrc .\sfx\dachone_shoot.asm
-incsrc .\music\title.asm
+;incsrc .\music\title.asm
+pad $d858
 incsrc .\music\escape.asm
 incsrc .\sfx\get_weapon_energy.asm
 incsrc .\unused\unused358d5.asm

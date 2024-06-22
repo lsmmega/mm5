@@ -23,16 +23,16 @@
 	dl music_charge
 	dh music_napalm
 	dl music_napalm
-	dh music_dark
-	dl music_dark
-	dh music_wily
-	dl music_wily
+	;dh music_dark
+	;dl music_dark
+	;dh music_wily
+	;dl music_wily
 	dh music_boss
 	dl music_boss
-	dh music_opening
-	dl music_opening
-	dh music_ending
-	dl music_ending
+	;dh music_opening
+	;dl music_opening
+	;dh music_ending
+	;dl music_ending
 	dh music_stage_select
 	dl music_stage_select
 	dh music_game_start
@@ -51,8 +51,8 @@
 	dl music_get_weapon
 	dh music_all_stage_clear
 	dl music_all_stage_clear
-	dh music_last_boss
-	dl music_last_boss
+	;dh music_last_boss
+	;dl music_last_boss
 
 ;sfx
 	dh sfx_lighting
@@ -113,8 +113,8 @@
 ;sfx
 	dh sfx_lift_up
 	dl sfx_lift_up
-	dh sfx_life_slow
-	dl sfx_life_slow
+	;dh sfx_lift_slow
+	;dl sfx_lift_slow
 	dh sfx_train_1
 	dl sfx_train_1
 	dh sfx_train_2
@@ -142,7 +142,7 @@
 	dh sfx_gravity_switch
 	dl sfx_gravity_switch
 	dh sfx_water_wave
-	dl sfx_watet_wave
+	dl sfx_water_wave
 	dh sfx_gyro_attack
 	dl sfx_gyro_attack
 	dh sfx_charge_up
@@ -161,8 +161,8 @@
 	dl sfx_dachone_shoot
 
 ;music
-	dh music_title
-	dl music_title
+	;dh music_title
+	;dl music_title
 	dh music_escape
 	dl music_escape
 
