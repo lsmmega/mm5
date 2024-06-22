@@ -23,8 +23,8 @@
 	dl music_charge
 	dh music_napalm
 	dl music_napalm
-	;dh music_dark
-	;dl music_dark
+	dh music_dark
+	dl music_dark
 	;dh music_wily
 	;dl music_wily
 	dh music_boss

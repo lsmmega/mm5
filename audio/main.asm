@@ -12,7 +12,7 @@ incsrc .\music\crystal.asm
 incsrc .\music\gyro.asm
 incsrc .\music\charge.asm
 incsrc .\music\napalm.asm
-;incsrc .\music\dark.asm
+incsrc .\music\dark.asm
 ;incsrc .\music\wily.asm
 pad $b748
 incsrc .\music\boss.asm
