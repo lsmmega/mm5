@@ -5,8 +5,8 @@
 	dh instruments_data
 	dl instruments_data
 
+track_data_start
 ;music
-	track_data_start
 	dh music_gravity
 	dl music_gravity
 	dh music_stone
@@ -169,4 +169,4 @@
 ;sfx
 	dh sfx_get_weapon_energy
 	dl sfx_get_weapon_energy
-	track_data_end
+track_data_end
