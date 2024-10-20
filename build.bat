@@ -6,7 +6,7 @@ bmp2nes gfx/sprites/capsules/small_life_capsule.bmp
 bmp2nes gfx/sprites/capsules/large_weapon_capsule.bmp
 bmp2nes gfx/sprites/capsules/small_weapon_capsule.bmp
 bmp2nes gfx/sprites/1up.bmp
-bmp2nes gfx/sprites/killed.bmp
+bmp2nes gfx/sprites/explosion.bmp
 bmp2nes gfx/sprites/bars/bar_vertical.bmp
 bmp2nes gfx/sprites/ready.bmp
 asm6 main.asm mm5.nes
