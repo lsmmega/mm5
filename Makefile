@@ -1,20 +1,11 @@
 rom_obj := \
 	audio.o  \
+	data.o   \
 	gfx.o    \
 	header.o \
 	home.o   \
-	stages.o \
-	bank10.o \
-	bank11.o \
-	bank12.o \
-	bank13.o \
-	bank14.o \
-	bank15.o \
-	bank16.o \
-	bank17.o \
-	bank1B.o \
-	bank1C.o \
-	bank1D.o
+	main.o   \
+	stages.o
 
 mm5_obj := $(rom_obj:.o=.o)
 
