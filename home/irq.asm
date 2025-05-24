@@ -1,1 +1,149 @@
-;IRQ:
+IRQ:
+	.ORG $C169
+
+	PHP
+	PHA
+	TXA
+	PHA
+	TYA
+	PHA
+	STA $E000
+	STA $E001
+	LDX $9A
+	LDA label_1,X
+	BNE label_2
+	LDX #$07
+label_3
+	NOP
+	DEX
+	BNE label_3
+label_2
+	JMP ($0097)
+	LDA $2002
+	LDA $A4
+	LSR
+	LSR
+	LSR
+	ORA $78
+	LDY $79
+	STY $2006
+	STA $2006
+	LDA $FF
+	STA $2000
+	LDA $A4
+	STA $2005
+	LDA #$00
+	STA $2005
+	JMP label_4
+	LDA $2002
+	LDA #$23
+	STA $2006
+	LDA #$00
+	STA $2006
+	LDA #$00
+	STA $2005
+	STA $2005
+	LDA $A5
+	EOR #$01
+label_6
+	ORA $FF
+	STA $2000
+	JMP label_4
+	LDA $2002
+	LDA $78
+	STA $2005
+	LDA #$00
+	STA $2005
+	LDA #$2E
+	STA $C000
+	LDA #$04
+	STA $97
+	LDA #$C2
+	STA $98
+	JMP label_5
+	LDA $2002
+	LDA $79
+	STA $2005
+	LDA $A2
+	STA $2005
+	LDA $7A
+	STA $C000
+	LDA #$04
+	STA $97
+	LDA #$C2
+	STA $98
+	JMP $C12B
+	LDA $2002
+	LDA $A4
+	STA $2005
+	LDA $A2
+	STA $2005
+	BEQ label_4
+	LDA $2002
+	LDA $7A
+	STA $2006
+	LDA $7B
+	STA $2006
+	LDA #$00
+	STA $2005
+	STA $2005
+	LDA $FF
+	STA $2000
+	BNE label_4
+	LDA $2002
+	LDA #$29
+	STA $2006
+	LDA #$C0
+	STA $2006
+	LDA #$00
+	STA $2005
+	STA $2005
+	LDA $FF
+	ORA #$02
+	STA $2000
+	BNE label_4
+	LDA $2002
+	LDA $78
+	STA $2005
+	LDA #$00
+	STA $2005
+	LDA #$1F
+	STA $C000
+	LDA #$69
+	STA $97
+	LDA #$C2
+	STA $98
+	BNE label_5
+	LDA $2002
+	LDA $79
+	STA $2005
+	LDA #$00
+	STA $2005
+label_4
+	STA $E000
+label_5
+	PLA
+	TAY
+	PLA
+	TAX
+	PLA
+	PLP
+	RTI
+	ROR $85,X
+	LDA #$CA
+	.HEX E7
+	.HEX 13
+	.HEX 2F
+	EOR label_6
+	CMP ($C1,X)
+	CMP ($C2,X)
+	.HEX C2
+	.HEX C2
+label_1
+	BRK
+	BRK
+	BRK
+	ORA ($01,X)
+	BRK
+	BRK
+	.HEX 01

@@ -1,1 +1,134 @@
-;RESET:
+RESET:
+	.ORG $FE00
+
+	SEI
+	CLD
+	LDA #$08
+	STA $2000
+	LDA #$40
+	STA $4017
+	LDX #$00
+	STX $2001
+	STX $4010
+	STX $4015
+	DEX
+	TXS
+	LDX #$04
+label_1
+	LDA $2002
+	BPL label_1
+label_2
+	LDA $2002
+	BMI label_2
+	DEX
+	BNE label_1
+	LDA $2002
+	LDA #$10
+	TAY
+label_3
+	STA $2006
+	STA $2006
+	EOR #$10
+	DEY
+	BNE label_3
+	TYA
+label_4
+	STA $0000,Y
+	STA $0100,Y
+	STA $0200,Y
+	STA $0300,Y
+	STA $0400,Y
+	STA $0500,Y
+	STA $0600,Y
+	STA $0700,Y
+	DEY
+	BNE label_4
+	LDX #$07
+	LDA #$88
+label_5
+	STA $DC,X
+	DEX
+	BPL label_5
+	LDA #$18
+	STA $FE
+	LDA #$01
+	JSR $FFB7
+	LDX #$05
+	LDA #$00
+label_6
+	STX $8000
+	STA $8001
+	DEX
+	BPL label_6
+	JSR $C38F
+	LDA #$20
+	LDX #$00
+	LDY #$00
+	JSR $C343
+	LDA #$28
+	LDX #$00
+	LDY #$00
+	JSR $C343
+	LDA #$DD
+	STA $94
+	LDA #$E8
+	STA $93
+	LDA #$02
+	JSR $FEF3
+	LDA #$88
+	STA $E4
+	STA $9B
+	STA $FF
+	STA $2000
+	LDA #$02
+	STA $BF
+	LDA #$9C
+	STA $B0
+	STA $BA
+	LDX #$FF
+	TXS
+label_9
+	LDX #$00
+	STX $90
+	LDY #$04
+label_8
+	LDA $80,X
+	CMP #$04
+	BCS label_7
+	INX
+	INX
+	INX
+	INX
+	DEY
+	BNE label_8
+	JMP label_9
+label_7
+	LDA $90
+	BNE label_9
+	DEY
+	TYA
+	EOR #$03
+	STA $91
+	LDY $80,X
+	LDA #$02
+	STA $80,X
+	CPY #$08
+	BNE label_10
+	LDA $82,X
+	STA $93
+	LDA $83,X
+	STA $94
+	JMP ($0093)
+label_10
+	LDA $82,X
+	TAX
+	TXS
+	LDA $91
+	BNE label_11
+	JSR $C2E5
+label_11
+	PLA
+	TAY
+	PLA
+	TAX
+	RTS

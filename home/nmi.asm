@@ -1,1 +1,200 @@
-;NMI:
+NMI:
+	.ORG $C000
+
+label_14
+	PHP
+label_15
+	PHA
+	TXA
+	PHA
+	TYA
+	PHA
+	LDA $F0
+	BEQ label_1
+	JMP label_2
+label_1
+	LDA $95
+	BEQ label_3
+	JMP label_4
+label_3
+	LDA $19
+	ORA $1A
+	STA $60
+	LDA $FA
+	STA $A2
+	LDA $FC
+	STA $A4
+	LDA $FD
+	AND #$03
+	STA $A5
+	LDA $9B
+	STA $9C
+	LDA $99
+	STA $9A
+	CMP #$05
+	BNE label_5
+	LDA $78
+	STA $A4
+label_5
+	LDA $FF
+	AND #$78
+	STA $2000
+	LDA #$00
+	STA $2001
+	STA $2003
+	LDA #$02
+	STA $4014
+	LDA $1C
+	BEQ label_6
+	LDA #$00
+	STA $1C
+	LDX #$50
+	JSR $C29C
+label_6
+	LDA $19
+	BEQ label_7
+	JSR $C298
+label_7
+	LDA $1A
+	BEQ label_8
+	LDA $FF
+	AND #$7F
+	ORA #$04
+	STA $2000
+	LDX #$00
+	STX $1A
+	JSR $C29C
+	LDA $FF
+	AND #$7F
+	STA $2000
+label_8
+	LDA $18
+	BEQ label_9
+	LDA $60
+	BNE label_9
+	LDX #$00
+	STX $18
+	LDA $2002
+	LDA #$3F
+	STA $2006
+	STX $2006
+	LDY #$20
+label_10
+	LDA $0600,X
+	STA $2007
+	INX
+	DEY
+	BNE label_10
+	LDA #$3F
+	STA $2006
+	STY $2006
+	STY $2006
+	STY $2006
+label_9
+	LDX #$05
+label_11
+	STX $8000
+	LDA $EA,X
+	STA $8001
+	DEX
+	BPL label_11
+	LDA $F2
+	STA $8000
+label_4
+	LDA $9A
+	CMP #$04
+	BNE label_12
+	LDA $2002
+	LDA $78
+	STA $2005
+	LDA #$00
+	STA $2005
+	BEQ label_13
+label_12
+	LDA $2002
+	LDA $A4
+	STA $2005
+	LDA $A2
+	STA $2005
+label_13
+	LDA $FE
+	STA $2001
+	LDA $A5
+	ORA $FF
+	STA $2000
+	LDA $9C
+	STA label_14
+	STA label_15
+	LDX $96
+	STA $E000,X
+	BEQ label_2
+	LDX $9A
+	LDA $C280,X
+	STA $97
+	LDA $C288,X
+	STA $98
+label_2
+	INC $92
+	LDX #$FF
+	STX $90
+	INX
+	LDY #$04
+label_17
+	LDA $80,X
+	CMP #$01
+	BNE label_16
+	DEC $81,X
+	BNE label_16
+	LDA #$04
+	STA $80,X
+label_16
+	INX
+	INX
+	INX
+	INX
+	DEY
+	BNE label_17
+	LDA $9A
+	CMP #$04
+	BEQ label_18
+	TSX
+	LDA $0107,X
+	STA $E9
+	LDA $0106,X
+	STA $E8
+	LDA #$C1
+	STA $0107,X
+	LDA #$47
+	STA $0106,X
+label_18
+	PLA
+	TAY
+	PLA
+	TAX
+	PLA
+	PLP
+	RTI
+	PHP
+	PHP
+	PHP
+	PHA
+	TXA
+	PHA
+	TYA
+	PHA
+	TSX
+	SEC
+	LDA $E8
+	SBC #$01
+	STA $0105,X
+	LDA $E9
+	SBC #$00
+	STA $0106,X
+	JSR $FF68
+	PLA
+	TAY
+	PLA
+	TAX
+	PLA
+	PLP
+	RTS
