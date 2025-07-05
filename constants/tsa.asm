@@ -1,0 +1,18 @@
+.ENUM
+	background
+	wall
+	ladder
+	special
+	laddertop
+	glide_right
+	foreground
+	glide_left
+	water
+	unused_09
+	unused_0a
+	unused_0b
+	unused_0c
+	usused_0d
+	usused_0e
+	spikes
+.ENDENUM
