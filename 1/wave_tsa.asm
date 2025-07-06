@@ -1226,69 +1226,69 @@
 	.BYTE background << 4  | 2 ;BE
 	.BYTE background << 4  | 2 ;BF
 	.BYTE background << 4  | 0 ;C0
-	.BYTE usused_0d << 4   | 1 ;C1
-	.BYTE usused_0d << 4   | 1 ;C2
-	.BYTE usused_0d << 4   | 1 ;C3
-	.BYTE usused_0d << 4   | 1 ;C4
-	.BYTE usused_0d << 4   | 1 ;C5
+	.BYTE unused_0d << 4   | 1 ;C1
+	.BYTE unused_0d << 4   | 1 ;C2
+	.BYTE unused_0d << 4   | 1 ;C3
+	.BYTE unused_0d << 4   | 1 ;C4
+	.BYTE unused_0d << 4   | 1 ;C5
 	.BYTE wall << 4        | 3 ;C6
-	.BYTE usused_0d << 4   | 0 ;C7
+	.BYTE unused_0d << 4   | 0 ;C7
 	.BYTE background << 4  | 0 ;C8
-	.BYTE usused_0d << 4   | 1 ;C9
-	.BYTE usused_0d << 4   | 1 ;CA
-	.BYTE usused_0d << 4   | 1 ;CB
-	.BYTE usused_0d << 4   | 1 ;CC
-	.BYTE usused_0d << 4   | 1 ;CD
-	.BYTE usused_0d << 4   | 1 ;CE
-	.BYTE usused_0d << 4   | 0 ;CF
+	.BYTE unused_0d << 4   | 1 ;C9
+	.BYTE unused_0d << 4   | 1 ;CA
+	.BYTE unused_0d << 4   | 1 ;CB
+	.BYTE unused_0d << 4   | 1 ;CC
+	.BYTE unused_0d << 4   | 1 ;CD
+	.BYTE unused_0d << 4   | 1 ;CE
+	.BYTE unused_0d << 4   | 0 ;CF
 	.BYTE background << 4  | 2 ;D0
-	.BYTE usused_0d << 4   | 1 ;D1
-	.BYTE usused_0d << 4   | 1 ;D2
-	.BYTE usused_0d << 4   | 1 ;D3
-	.BYTE usused_0d << 4   | 1 ;D4
-	.BYTE usused_0d << 4   | 1 ;D5
-	.BYTE usused_0d << 4   | 1 ;D6
+	.BYTE unused_0d << 4   | 1 ;D1
+	.BYTE unused_0d << 4   | 1 ;D2
+	.BYTE unused_0d << 4   | 1 ;D3
+	.BYTE unused_0d << 4   | 1 ;D4
+	.BYTE unused_0d << 4   | 1 ;D5
+	.BYTE unused_0d << 4   | 1 ;D6
 	.BYTE background << 4  | 0 ;D7
 	.BYTE background << 4  | 2 ;D8
 	.BYTE background << 4  | 1 ;D9
-	.BYTE usused_0d << 4   | 2 ;DA
-	.BYTE usused_0d << 4   | 1 ;DB
-	.BYTE usused_0d << 4   | 1 ;DC
-	.BYTE usused_0d << 4   | 1 ;DD
-	.BYTE usused_0d << 4   | 1 ;DE
+	.BYTE unused_0d << 4   | 2 ;DA
+	.BYTE unused_0d << 4   | 1 ;DB
+	.BYTE unused_0d << 4   | 1 ;DC
+	.BYTE unused_0d << 4   | 1 ;DD
+	.BYTE unused_0d << 4   | 1 ;DE
 	.BYTE background << 4  | 0 ;DF
 	.BYTE background << 4  | 2 ;E0
-	.BYTE usused_0d << 4   | 1 ;E1
-	.BYTE usused_0d << 4   | 1 ;E2
-	.BYTE usused_0d << 4   | 1 ;E3
-	.BYTE usused_0d << 4   | 1 ;E4
+	.BYTE unused_0d << 4   | 1 ;E1
+	.BYTE unused_0d << 4   | 1 ;E2
+	.BYTE unused_0d << 4   | 1 ;E3
+	.BYTE unused_0d << 4   | 1 ;E4
 	.BYTE background << 4  | 1 ;E5
 	.BYTE background << 4  | 1 ;E6
 	.BYTE background << 4  | 0 ;E7
 	.BYTE background << 4  | 2 ;E8
-	.BYTE usused_0d << 4   | 0 ;E9
-	.BYTE usused_0d << 4   | 0 ;EA
-	.BYTE usused_0d << 4   | 0 ;EB
-	.BYTE usused_0d << 4   | 0 ;EC
+	.BYTE unused_0d << 4   | 0 ;E9
+	.BYTE unused_0d << 4   | 0 ;EA
+	.BYTE unused_0d << 4   | 0 ;EB
+	.BYTE unused_0d << 4   | 0 ;EC
 	.BYTE background << 4  | 0 ;ED
 	.BYTE background << 4  | 0 ;EE
-	.BYTE usused_0d << 4   | 0 ;EF
+	.BYTE unused_0d << 4   | 0 ;EF
 	.BYTE background << 4  | 1 ;F0
-	.BYTE usused_0d << 4   | 0 ;F1
-	.BYTE usused_0d << 4   | 0 ;F2
-	.BYTE usused_0d << 4   | 2 ;F3
-	.BYTE usused_0d << 4   | 2 ;F4
-	.BYTE usused_0d << 4   | 2 ;F5
-	.BYTE usused_0d << 4   | 2 ;F6
-	.BYTE usused_0d << 4   | 0 ;F7
+	.BYTE unused_0d << 4   | 0 ;F1
+	.BYTE unused_0d << 4   | 0 ;F2
+	.BYTE unused_0d << 4   | 2 ;F3
+	.BYTE unused_0d << 4   | 2 ;F4
+	.BYTE unused_0d << 4   | 2 ;F5
+	.BYTE unused_0d << 4   | 2 ;F6
+	.BYTE unused_0d << 4   | 0 ;F7
 	.BYTE background << 4  | 1 ;F8
-	.BYTE usused_0d << 4   | 0 ;F9
-	.BYTE usused_0d << 4   | 0 ;FA
-	.BYTE usused_0d << 4   | 0 ;FB
-	.BYTE usused_0d << 4   | 0 ;FC
-	.BYTE usused_0d << 4   | 0 ;FD
-	.BYTE usused_0d << 4   | 0 ;FE
-	.BYTE usused_0d << 4   | 0 ;FF
+	.BYTE unused_0d << 4   | 0 ;F9
+	.BYTE unused_0d << 4   | 0 ;FA
+	.BYTE unused_0d << 4   | 0 ;FB
+	.BYTE unused_0d << 4   | 0 ;FC
+	.BYTE unused_0d << 4   | 0 ;FD
+	.BYTE unused_0d << 4   | 0 ;FE
+	.BYTE unused_0d << 4   | 0 ;FF
 
 	;     topleft, topright, bottomleft, bottomright
 	.BYTE $14, $15, $1C, $1D ;00

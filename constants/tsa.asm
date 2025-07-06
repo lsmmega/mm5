@@ -12,7 +12,7 @@
 	unused_0a
 	unused_0b
 	unused_0c
-	usused_0d
-	usused_0e
+	unused_0d
+	unused_0e
 	spikes
 .ENDENUM
