@@ -8,7 +8,7 @@
 	got_letter_n  = 1 << 6
 	got_letter_v  = 1 << 7
 
-;caslte stage clear flags.
+;castle stage clear flags.
 	dark_1_clear = 1 << 0
 	dark_2_clear = 1 << 1
 	dark_3_clear = 1 << 2
