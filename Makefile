@@ -1,4 +1,5 @@
 rom_obj := \
+	audio.o \
 	header.o \
 	home.o \
 	0.o \
@@ -25,9 +26,6 @@ rom_obj := \
 	21.o \
 	22.o \
 	23.o \
-	24.o \
-	25.o \
-	26.o \
 	27.o \
 	28.o \
 	29.o \
@@ -35,6 +33,12 @@ rom_obj := \
 
 cfg := \
 	mm5.cfg
+
+audio := \
+	audio.asm \
+	constants/* \
+	macros/* \
+	audio/*
 
 header := \
 	constants/* \
@@ -154,18 +158,6 @@ home := \
 	23.asm \
 	23/*
 
-24 := \
-	24.asm \
-	24/*
-
-25 := \
-	25.asm \
-	25/*
-
-26 := \
-	26.asm \
-	26/*
-
 27 := \
 	27.asm \
 	27/*
@@ -192,6 +184,9 @@ mm5: mm5.nes
 
 %.nes: $(rom_obj) $(cfg)
 	ld65 -C $(cfg) $(rom_obj) -o $@ -m $*.map
+
+audio.o: $(audio)
+	ca65 audio.asm
 
 header.o: $(header)
 	ca65 header.asm
@@ -270,15 +265,6 @@ home.o: $(home)
 
 23.o: $(23)
 	ca65 23.asm
-
-24.o: $(24)
-	ca65 24.asm
-
-25.o: $(25)
-	ca65 25.asm
-
-26.o: $(26)
-	ca65 26.asm
 
 27.o: $(27)
 	ca65 27.asm

@@ -1,0 +1,7 @@
+.SEGMENT "BANK18"
+.INCLUDE "constants/audio.asm"
+.INCLUDE "macros/audio.asm"
+.INCBIN  "audio/engine.bin"
+.INCBIN  "audio/pointers.bin"
+.INCBIN  "audio/instruments.bin"
+.INCBIN  "audio/audio.bin"
