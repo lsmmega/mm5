@@ -1,4 +1,4 @@
-;beat letter flags.
+;beat letter flags
 	got_letter_m1 = 1 << 0
 	got_letter_e  = 1 << 1
 	got_letter_g  = 1 << 2
@@ -8,7 +8,7 @@
 	got_letter_n  = 1 << 6
 	got_letter_v  = 1 << 7
 
-;castle stage clear flags.
+;castle stage clear flags
 	dark_1_clear = 1 << 0
 	dark_2_clear = 1 << 1
 	dark_3_clear = 1 << 2
@@ -18,7 +18,7 @@
 	wily_3_clear = 1 << 6
 	wily_4_clear = 1 << 7
 
-;rematch flags.
+;rematch flags
 	rematch_gravityman_done = 1 << 0
 	rematch_waveman_done    = 1 << 1
 	rematch_stoneman_done   = 1 << 2
@@ -28,7 +28,7 @@
 	rematch_napalmman_done  = 1 << 6
 	rematch_crystalman_done = 1 << 7
 
-;regular stage clear flags.
+;regular stage clear flags
 	stage_gravityman_clear = 1 << 0
 	stage_waveman_clear    = 1 << 1
 	stage_stoneman_clear   = 1 << 2
