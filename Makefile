@@ -38,7 +38,8 @@ audio := \
 	audio.asm \
 	constants/* \
 	macros/* \
-	audio/*
+	audio/* \
+	audio/music/*
 
 header := \
 	header.asm \
