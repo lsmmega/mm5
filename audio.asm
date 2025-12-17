@@ -19,4 +19,5 @@
 .INCLUDE "audio/music/ending.asm"
 .INCLUDE "audio/music/stage_select.asm"
 .INCLUDE "audio/music/boss_show.asm"
+.INCLUDE "audio/music/darkman_castle.asm"
 .INCBIN  "audio/audio.bin"
