@@ -1,0 +1,70 @@
+.SEGMENT "BANK00"
+.INCLUDE "constants/tsa.asm"
+.INCBIN  "stages/gravityman/0_0.bin"
+.INCLUDE "stages/gravityman/gravityman_tsa.asm"
+.INCBIN  "stages/gravityman/0_1.bin"
+
+.SEGMENT "BANK01"
+.INCBIN  "stages/waveman/1_0.bin"
+.INCLUDE "stages/waveman/waveman_tsa.asm"
+.INCBIN  "stages/waveman/1_1.bin"
+
+.SEGMENT "BANK02"
+.INCBIN  "stages/stoneman/2_0.bin"
+.INCLUDE "stages/stoneman/stoneman_tsa.asm"
+.INCBIN  "stages/stoneman/2_1.bin"
+
+.SEGMENT "BANK03"
+.INCBIN  "stages/gyroman/3_0.bin"
+.INCLUDE "stages/gyroman/gyroman_tsa.asm"
+.INCBIN  "stages/gyroman/3_1.bin"
+
+.SEGMENT "BANK04"
+.INCBIN  "stages/starman/4_0.bin"
+.INCLUDE "stages/starman/starman_tsa.asm"
+.INCBIN  "stages/starman/4_1.bin"
+
+.SEGMENT "BANK05"
+.INCBIN  "stages/chargeman/5_0.bin"
+.INCLUDE "stages/chargeman/chargeman_tsa.asm"
+.INCBIN  "stages/chargeman/5_1.bin"
+
+.SEGMENT "BANK06"
+.INCBIN  "stages/napalmman/6_0.bin"
+.INCLUDE "stages/napalmman/napalmman_tsa.asm"
+.INCBIN  "stages/napalmman/6_1.bin"
+
+.SEGMENT "BANK07"
+.INCBIN  "stages/crystalman/7_0.bin"
+.INCLUDE "stages/crystalman/crystalman_tsa.asm"
+.INCBIN  "stages/crystalman/7_1.bin"
+
+.SEGMENT "BANK08"
+.INCBIN  "stages/darkman1_4/8_0.bin"
+.INCLUDE "stages/darkman1_4/darkman1_4_tsa.asm"
+.INCBIN  "stages/darkman1_4/8_1.bin"
+
+.SEGMENT "BANK09"
+.INCBIN  "stages/darkman2/9_0.bin"
+.INCLUDE "stages/darkman2/darkman2_tsa.asm"
+.INCBIN  "stages/darkman2/9_1.bin"
+
+.SEGMENT "BANK0A"
+.INCBIN  "stages/darkman3/10_0.bin"
+.INCLUDE "stages/darkman3/darkman3_tsa.asm"
+.INCBIN  "stages/darkman3/10_1.bin"
+
+.SEGMENT "BANK0C"
+.INCBIN  "stages/wily1/12_0.bin"
+.INCLUDE "stages/wily1/wily1_tsa.asm"
+.INCBIN  "stages/wily1/12_1.bin"
+
+.SEGMENT "BANK0D"
+.INCBIN  "stages/wily2/13_0.bin"
+.INCLUDE "stages/wily2/wily2_tsa.asm"
+.INCBIN  "stages/wily2/13_1.bin"
+
+.SEGMENT "BANK0E"
+.INCBIN  "stages/wily3_4/14_0.bin"
+.INCLUDE "stages/wily3_4/wily3_4_tsa.asm"
+.INCBIN  "stages/wily3_4/14_1.bin"
