@@ -3,12 +3,9 @@ rom_obj := \
 	gfx.o \
 	header.o \
 	home.o \
+	screen.o \
 	sprites.o \
 	stages.o \
-	11.o \
-	15.o \
-	16.o \
-	17.o \
 	22.o \
 	23.o \
 	27.o \
@@ -37,6 +34,10 @@ home := \
 	home.asm \
 	home/*
 
+screen := \
+	screen.asm \
+	screen/*
+
 sprites := \
 	sprites.asm \
 	sprites/*
@@ -58,22 +59,6 @@ stages := \
 	stages/wily1/* \
 	stages/wily2/* \
 	stages/wily3_4/*
-
-11 := \
-	11.asm \
-	11/*
-
-15 := \
-	15.asm \
-	15/*
-
-16 := \
-	16.asm \
-	16/*
-
-17 := \
-	17.asm \
-	17/*
 
 22 := \
 	22.asm \
@@ -119,23 +104,14 @@ header.o: $(header)
 home.o: $(home)
 	ca65 home.asm
 
+screen.o: $(screen)
+	ca65 screen.asm
+
 sprites.o: $(sprites)
 	ca65 sprites.asm
 
 stages.o: $(stages)
 	ca65 stages.asm
-
-11.o: $(11)
-	ca65 11.asm
-
-15.o: $(15)
-	ca65 15.asm
-
-16.o: $(16)
-	ca65 16.asm
-
-17.o: $(17)
-	ca65 17.asm
 
 22.o: $(22)
 	ca65 22.asm
