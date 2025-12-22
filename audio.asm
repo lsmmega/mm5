@@ -31,3 +31,5 @@
 .INCLUDE "audio/music/fake_protoman_whistle.asm"
 .INCLUDE "audio/music/protoman_whistle.asm"
 .INCBIN  "audio/audio_1.bin"
+.INCLUDE "audio/music/escape.asm"
+.INCBIN  "audio/audio_2.bin"
