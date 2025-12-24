@@ -1,3 +1,4 @@
+;16x16
 ;topleft
 	.BYTE $00 ;00
 	.BYTE $03 ;01
@@ -1288,7 +1289,7 @@
 	.BYTE glide_right << 4 | 0 ;FE
 	.BYTE background << 4  | 0 ;FF
 
-	;     topleft, topright, bottomleft, bottomright
+;32x32, topleft, topright, bottomleft, bottomright
 	.BYTE $08, $09, $10, $11 ;00
 	.BYTE $0A, $0B, $12, $13 ;01
 	.BYTE $0C, $08, $14, $08 ;02

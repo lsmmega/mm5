@@ -1,3 +1,4 @@
+;16x16
 ;topleft
 	.BYTE $00 ;00
 	.BYTE $E1 ;01
@@ -1288,7 +1289,7 @@
 	.BYTE unused_0d << 4   | 0 ;FE
 	.BYTE unused_0d << 4   | 0 ;FF
 
-	;     topleft, topright, bottomleft, bottomright
+;32x32, topleft, topright, bottomleft, bottomright
 	.BYTE $14, $15, $1C, $1D ;00
 	.BYTE $03, $23, $0B, $2B ;01
 	.BYTE $4E, $4A, $50, $51 ;02
