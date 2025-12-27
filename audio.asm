@@ -33,5 +33,5 @@
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/title.asm"
 .INCLUDE "audio/music/escape.asm"
-.INCBIN  "audio/audio_2.bin"
+.INCLUDE "audio/sfx/get_weapon_energy.asm"
 .INCLUDE "audio/unused/unused.asm"
