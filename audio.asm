@@ -42,6 +42,7 @@
 .INCLUDE "audio/sfx/charge_kick.asm"
 .INCLUDE "audio/sfx/1up.asm"
 .INCLUDE "audio/sfx/door.asm"
+.INCLUDE "audio/sfx/refill.asm"
 .INCBIN  "audio/audio_0.bin"
 .INCLUDE "audio/music/fake_protoman_whistle.asm"
 .INCLUDE "audio/music/protoman_whistle.asm"
