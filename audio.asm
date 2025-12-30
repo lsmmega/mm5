@@ -31,6 +31,7 @@
 .INCLUDE "audio/sfx/route.asm"
 .INCLUDE "audio/sfx/wily_ufo.asm"
 .INCLUDE "audio/sfx/mega_buster.asm"
+.INCLUDE "audio/sfx/landing.asm"
 .INCBIN  "audio/audio_0.bin"
 .INCLUDE "audio/music/fake_protoman_whistle.asm"
 .INCLUDE "audio/music/protoman_whistle.asm"
