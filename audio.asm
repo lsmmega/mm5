@@ -61,6 +61,7 @@
 .INCLUDE "audio/sfx/power_muscler.asm"
 .INCLUDE "audio/sfx/taban.asm"
 .INCLUDE "audio/sfx/teckyun.asm"
+.INCLUDE "audio/sfx/appearing_block.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/title.asm"
 .INCLUDE "audio/music/escape.asm"
