@@ -1,4 +1,4 @@
-sfx_enemy_destroyed:
+sfx_destroyed:
 	sfx_priority 9
 
 ;1
