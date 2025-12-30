@@ -39,6 +39,7 @@
 .INCLUDE "audio/sfx/half_charge_shot.asm"
 .INCLUDE "audio/sfx/full_charge_shot.asm"
 .INCLUDE "audio/sfx/charge_shot_full_charging.asm"
+.INCLUDE "audio/sfx/charge_kick.asm"
 .INCBIN  "audio/audio_0.bin"
 .INCLUDE "audio/music/fake_protoman_whistle.asm"
 .INCLUDE "audio/music/protoman_whistle.asm"
