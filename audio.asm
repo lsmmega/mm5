@@ -36,6 +36,7 @@
 .INCLUDE "audio/sfx/death.asm"
 .INCLUDE "audio/sfx/enemy_immune.asm"
 .INCLUDE "audio/sfx/pipe.asm"
+.INCLUDE "audio/sfx/half_charge_shot.asm"
 .INCBIN  "audio/audio_0.bin"
 .INCLUDE "audio/music/fake_protoman_whistle.asm"
 .INCLUDE "audio/music/protoman_whistle.asm"
