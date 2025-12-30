@@ -28,6 +28,7 @@
 .INCLUDE "audio/music/wily_defeated.asm"
 .INCLUDE "audio/music/wily_fighting.asm"
 .INCLUDE "audio/sfx/lighting.asm"
+.INCLUDE "audio/sfx/route.asm"
 .INCBIN  "audio/audio_0.bin"
 .INCLUDE "audio/music/fake_protoman_whistle.asm"
 .INCLUDE "audio/music/protoman_whistle.asm"
