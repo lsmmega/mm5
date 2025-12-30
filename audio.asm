@@ -57,6 +57,7 @@
 .INCLUDE "audio/sfx/lift_up_2.asm"
 .INCLUDE "audio/sfx/train_1.asm"
 .INCLUDE "audio/sfx/train_2.asm"
+.INCLUDE "audio/sfx/teleport_out.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/title.asm"
 .INCLUDE "audio/music/escape.asm"
