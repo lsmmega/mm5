@@ -63,6 +63,7 @@
 .INCLUDE "audio/sfx/teckyun.asm"
 .INCLUDE "audio/sfx/appearing_block.asm"
 .INCLUDE "audio/sfx/jump_into_water.asm"
+.INCLUDE "audio/sfx/kouker_q.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/title.asm"
 .INCLUDE "audio/music/escape.asm"
