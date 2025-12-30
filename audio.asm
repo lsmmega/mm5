@@ -47,6 +47,7 @@
 .INCLUDE "audio/sfx/confirm.asm"
 .INCLUDE "audio/sfx/open_menu.asm"
 .INCLUDE "audio/sfx/enemy_hit.asm"
+.INCLUDE "audio/sfx/enemy_destroyed.asm"
 .INCBIN  "audio/audio_0.bin"
 .INCLUDE "audio/music/fake_protoman_whistle.asm"
 .INCLUDE "audio/music/protoman_whistle.asm"
