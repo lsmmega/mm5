@@ -73,6 +73,7 @@
 .INCLUDE "audio/sfx/chargeman_launch.asm"
 .INCLUDE "audio/sfx/power_stone.asm"
 .INCLUDE "audio/sfx/gravity_hold.asm"
+.INCLUDE "audio/sfx/sumatran.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/title.asm"
 .INCLUDE "audio/music/escape.asm"
