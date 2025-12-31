@@ -69,6 +69,7 @@
 .INCLUDE "audio/sfx/beat.asm"
 .INCLUDE "audio/sfx/gravity_switch.asm"
 .INCLUDE "audio/sfx/water_wave.asm"
+.INCLUDE "audio/sfx/gyro_attack.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/title.asm"
 .INCLUDE "audio/music/escape.asm"
