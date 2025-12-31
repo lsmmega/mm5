@@ -66,6 +66,8 @@
 .INCLUDE "audio/sfx/kouker_q.asm"
 .INCLUDE "audio/sfx/metall_cannon.asm"
 .INCLUDE "audio/sfx/metall_k1000.asm"
+.INCLUDE "audio/sfx/beat.asm"
+.INCLUDE "audio/sfx/gravity_switch.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/title.asm"
 .INCLUDE "audio/music/escape.asm"
