@@ -68,6 +68,7 @@
 .INCLUDE "audio/sfx/metall_k1000.asm"
 .INCLUDE "audio/sfx/beat.asm"
 .INCLUDE "audio/sfx/gravity_switch.asm"
+.INCLUDE "audio/sfx/water_wave.asm"
 .INCBIN  "audio/audio_1.bin"
 .INCLUDE "audio/music/title.asm"
 .INCLUDE "audio/music/escape.asm"
