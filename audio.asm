@@ -75,6 +75,7 @@
 .INCLUDE "audio/sfx/gravity_hold.asm"
 .INCLUDE "audio/sfx/sumatran.asm"
 .INCBIN  "audio/audio_1.bin"
+.INCLUDE "audio/sfx/dachone_walking.asm"
 .INCLUDE "audio/sfx/dachone_laser.asm"
 .INCLUDE "audio/music/title.asm"
 .INCLUDE "audio/music/escape.asm"
