@@ -1,11 +1,20 @@
 .SEGMENT "BANK0B"
+.INCLUDE "constants/tsa.asm"
 .INCBIN  "screen/11.bin"
+.INCLUDE "screen/opening_scene_tsa.asm"
+.INCLUDE "screen/opening_scene_mapset.asm"
 
 .SEGMENT "BANK0F"
 .INCBIN  "screen/15.bin"
+.INCLUDE "screen/title_password_stage_select_boss_show_scene_tsa.asm"
+.INCLUDE "screen/title_password_stage_select_boss_show_scene_mapset.asm"
 
 .SEGMENT "BANK10"
 .INCBIN  "screen/16.bin"
+.INCLUDE "screen/weapon_capcom_logo_wily_castle_destroyed_scene_tsa.asm"
+.INCLUDE "screen/weapon_capcom_logo_wily_castle_destroyed_scene_mapset.asm"
 
 .SEGMENT "BANK11"
 .INCBIN  "screen/17.bin"
+.INCLUDE "screen/wily_darkman_castle_scene_tsa.asm"
+.INCLUDE "screen/wily_darkman_castle_scene_mapset.asm"

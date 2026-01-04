@@ -38,6 +38,7 @@ home := \
 
 screen := \
 	screen.asm \
+	constants/* \
 	screen/*
 
 sprites := \
