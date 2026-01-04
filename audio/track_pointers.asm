@@ -75,3 +75,4 @@ track_pointers:
 	.DBYT music_title
 	.DBYT music_escape
 	.DBYT sfx_get_weapon_energy
+track_pointers_end:

@@ -2,8 +2,12 @@
 .INCLUDE "constants/audio.asm"
 .INCLUDE "macros/audio.asm"
 .INCBIN  "audio/engine.bin"
+
+	.BYTE (track_pointers_end - track_pointers) / 2
+	.DBYT instrument_pointers
+
 .INCLUDE "audio/track_pointers.asm"
-.INCBIN  "audio/instruments.bin"
+.INCLUDE "audio/instruments.asm"
 .INCLUDE "audio/music/gravityman.asm"
 .INCLUDE "audio/music/stoneman.asm"
 .INCLUDE "audio/music/waveman.asm"
