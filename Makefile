@@ -39,7 +39,8 @@ home := \
 screen := \
 	screen.asm \
 	constants/* \
-	screen/*
+	screen/* \
+	screen/unused/*
 
 sprites := \
 	sprites.asm \
@@ -65,19 +66,23 @@ stages := \
 
 22 := \
 	22.asm \
-	22/*
+	22/* \
+	unused/*
 
 23 := \
 	23.asm \
-	23/*
+	23/* \
+	unused/*
 
 27 := \
 	27.asm \
-	27/*
+	27/* \
+	unused/*
 
 28 := \
 	28.asm \
-	28/*
+	28/* \
+	unused/*
 
 29 := \
 	29.asm \
