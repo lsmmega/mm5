@@ -3,6 +3,8 @@
 .INCBIN  "home/home_0.bin"
 .INCLUDE "home/init_sprites.asm"
 .INCBIN  "home/home_1.bin"
+.INCLUDE "home/audio_queue.asm"
+.INCBIN  "home/home_2.bin"
 ;.INCLUDE "home/reset.asm"
 ;.INCLUDE "home/irq.asm"
 ;.INCLUDE "home/nmi.asm"
