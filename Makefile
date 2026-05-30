@@ -1,8 +1,7 @@
 rom_obj := \
-	audio.o \
 	gfx.o \
 	header.o \
-	home.o \
+	main.o \
 	screen.o \
 	sprites.o \
 	stages.o \
@@ -101,9 +100,6 @@ mm5: mm5.nes
 %.nes: $(rom_obj) $(cfg)
 	ld65 -C $(cfg) $(rom_obj) -o $@ -m $*.map
 
-audio.o: $(audio)
-	ca65 audio.asm
-
 gfx.o: $(gfx)
 	bmp2nes $(_gfx)
 	ca65 gfx.asm
@@ -111,8 +107,8 @@ gfx.o: $(gfx)
 header.o: $(header)
 	ca65 header.asm
 
-home.o: $(home)
-	ca65 home.asm
+main.o: $(audio) $(home)
+	ca65 main.asm
 
 screen.o: $(screen)
 	ca65 screen.asm
