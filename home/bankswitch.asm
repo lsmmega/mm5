@@ -28,12 +28,12 @@ _audio_bankswitch:
 	LDA #$06
 	STA z:zbank_select
 	STA bank_select
-	LDA #$18
+	LDA #<.BANK (_nmi_audio_processing)
 	STA bank_data
 	LDA #$07
 	STA z:zbank_select
 	STA bank_select
-	LDA #$19
+	LDA #<.BANK (_nmi_audio_processing) + 1
 	STA bank_data
 
 @loop:
