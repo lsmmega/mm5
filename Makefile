@@ -34,8 +34,8 @@ header := \
 
 home := \
 	home.asm \
-	ram/* \
 	constants/* \
+	ram/* \
 	home/*
 
 screen := \
