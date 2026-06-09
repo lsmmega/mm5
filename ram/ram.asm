@@ -1,12 +1,24 @@
 	z00                    = $00
     z01                    = $01
+	z02                    = $02
 	zjoy1_pressed_bits     = $14
 	zjoy2_pressed_bits     = $15
 	zjoy1_pressed          = $16
 	zjoy2_pressed          = $17
 	znametable_arrangement = $2C
+	zgot_weapon_flag       = $6E
+	zthread_flag           = $80
+	zthread_timer          = $81
+	zthread_pointer        = $82
+	zthread_handle_flag    = $90
+	zthread_joy_flag       = $91
+	zthread_jump_pointer   = $93
+	zscanline_undo         = $9B
+	zscanline              = $9C
 	zaudio_bankswitch_x    = $A7
 	zaudio_bankswitch_y    = $A8
+	zmegaman_hp            = $B0
+	z1up                   = $BF
 	zplayback_flag         = $C0
 	zaudio_C1              = $C1
 	zaudio_C2              = $C2
@@ -36,6 +48,7 @@
 	zsfx_queue_index       = $DA
 	zsfx_queue_index_undo  = $DB
 	zsfx_queue             = $DC
+	zrandom                = $E4
 	zbank_select           = $F2
 	zbank_data_1           = $F3
 	zbank_data_2           = $F4
@@ -43,6 +56,8 @@
 	zbank_data_2_undo      = $F6
 	zbankswitching         = $F7
 	zaudio_bankswitching   = $F8
+	zppu_mask              = $FE
+	zppu_ctrl              = $FF
 
 	oam_hi_addr = 2
 
