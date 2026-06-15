@@ -7,6 +7,7 @@
 .INCBIN  "home/home_1.bin"
 .INCLUDE "home/audio_queue.asm"
 .INCBIN  "home/home_2.bin"
+.INCLUDE "home/thread.asm"
 .INCLUDE "home/bankswitch.asm"
 .INCLUDE "home/nametable_arrangement.asm"
 .INCBIN  "home/home_3.bin"
