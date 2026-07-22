@@ -46,6 +46,8 @@ screen := \
 
 sprites := \
 	sprites.asm \
+	constants/* \
+	sprites/pointers/* \
 	sprites/*
 
 stages := \
