@@ -5,6 +5,7 @@
 	zjoy2_pressed_bits     = $15
 	zjoy1_pressed          = $16
 	zjoy2_pressed          = $17
+	zscreen_update_flag    = $19
 	znametable_arrangement = $2C
 	zgot_weapon_flag       = $6E
 	zthread_flag           = $80
@@ -81,3 +82,6 @@
 	anote_ads_remain           = $740
 	achannel_loop_counter      = $744
 	achannel_handle            = $77C
+	ascreen_ppu_address        = $780
+	ascreen_ppu_size           = $782
+	ascreen_ppu_data           = $783
