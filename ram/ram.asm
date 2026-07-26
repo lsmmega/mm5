@@ -49,6 +49,7 @@
 	zsfx_queue_index_undo  = $DB
 	zsfx_queue             = $DC
 	zrandom                = $E4
+	zrender_flag           = $F0
 	zbank_select           = $F2
 	zbank_data_1           = $F3
 	zbank_data_2           = $F4
