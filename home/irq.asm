@@ -1,40 +1,42 @@
 IRQ:
-	.ORG $C169
-
 	PHP
 	PHA
-	TXA
-	PHA
-	TYA
-	PHA
-	STA $E000
-	STA $E001
-	LDX $9A
-	LDA label_1,X
-	BNE label_2
+	PHX
+	PHY
+	STA irq_disable
+	STA irq_enable
+	LDX z:zirq_index
+	LDA irq_loop_flag_table, X
+	BNE @no_loop
 	LDX #$07
-label_3
+
+@loop:
 	NOP
 	DEX
-	BNE label_3
-label_2
-	JMP ($0097)
+	BNE @loop
+
+@no_loop:
+	JMP (zirq_pointer)
+
+_irq_star_wily1_press:
 	LDA PPU_STATUS
-	LDA $A4
+	LDA z:zscreen_xcoord
 	LSR
 	LSR
 	LSR
-	ORA $78
-	LDY $79
+	ORA z:zirq_xcoord_1
+	LDY z:zirq_xcoord_2
 	STY PPU_ADDRESS
 	STA PPU_ADDRESS
-	LDA $FF
+	LDA z:zppu_ctrl
 	STA PPU_CTRL
-	LDA $A4
+	LDA z:zscreen_xcoord
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
-	JMP label_4
+	JMP _irq_done
+
+_irq_gyro_dark4:
 	LDA PPU_STATUS
 	LDA #$23
 	STA PPU_ADDRESS
@@ -43,53 +45,62 @@ label_2
 	LDA #$00
 	STA PPU_SCROLL
 	STA PPU_SCROLL
-	LDA $A5
-	EOR #$01
-label_6
-	ORA $FF
+	LDA z:znametable
+	EOR #nametable_top_right
+	ORA z:zppu_ctrl
 	STA PPU_CTRL
-	JMP label_4
+	JMP _irq_done
+
+_irq_rolling_drill:
 	LDA PPU_STATUS
-	LDA $78
+	LDA z:zirq_xcoord_1
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
 	LDA #$2E
-	STA $C000
-	LDA #$04
-	STA $97
-	LDA #$C2
-	STA $98
-	JMP label_5
+	STA irq_latch
+	LDA #<_irq_current_screen
+	STA z:zirq_pointer
+	LDA #>_irq_current_screen
+	STA z:zirq_pointer + 1
+	JMP _irq_next
+
+_irq_wave_charge:
 	LDA PPU_STATUS
-	LDA $79
+	LDA z:zirq_xcoord_2
 	STA PPU_SCROLL
-	LDA $A2
+	LDA z:zscreen_ycoord
 	STA PPU_SCROLL
-	LDA $7A
-	STA $C000
-	LDA #$04
-	STA $97
-	LDA #$C2
-	STA $98
-	JMP $C12B
+	LDA z:zirq_scanline
+	STA irq_latch
+	LDA #<_irq_current_screen
+	STA z:zirq_pointer
+	LDA #>_irq_current_screen
+	STA z:zirq_pointer + 1
+	JMP _irq_pop
+
+_irq_current_screen:
 	LDA PPU_STATUS
-	LDA $A4
+	LDA z:zscreen_xcoord
 	STA PPU_SCROLL
-	LDA $A2
+	LDA z:zscreen_ycoord
 	STA PPU_SCROLL
-	BEQ label_4
+	BEQ _irq_done
+
+_irq_octoper_oa_circuring_q9_wily_press_wily_machine_5:
 	LDA PPU_STATUS
-	LDA $7A
+	LDA z:zirq_scanline
 	STA PPU_ADDRESS
-	LDA $7B
+	LDA z:zirq_ycoord
 	STA PPU_ADDRESS
 	LDA #$00
 	STA PPU_SCROLL
 	STA PPU_SCROLL
-	LDA $FF
+	LDA z:zppu_ctrl
 	STA PPU_CTRL
-	BNE label_4
+	BNE _irq_done
+
+_irq_boss_show_get_weapon:
 	LDA PPU_STATUS
 	LDA #$29
 	STA PPU_ADDRESS
@@ -98,52 +109,61 @@ label_6
 	LDA #$00
 	STA PPU_SCROLL
 	STA PPU_SCROLL
-	LDA $FF
-	ORA #$02
+	LDA z:zppu_ctrl
+	ORA #nametable_bottom_left
 	STA PPU_CTRL
-	BNE label_4
+	BNE _irq_done
+
+_irq_big_pets_1:
 	LDA PPU_STATUS
-	LDA $78
+	LDA z:zirq_xcoord_1
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
 	LDA #$1F
-	STA $C000
-	LDA #$69
-	STA $97
-	LDA #$C2
-	STA $98
-	BNE label_5
+	STA irq_latch
+	LDA #<_irq_big_pets_2
+	STA z:zirq_pointer
+	LDA #>_irq_big_pets_2
+	STA z:zirq_pointer + 1
+	BNE _irq_next
+
+_irq_big_pets_2:
 	LDA PPU_STATUS
-	LDA $79
+	LDA z:zirq_xcoord_2
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
-label_4
-	STA $E000
-label_5
-	PLA
-	TAY
-	PLA
-	TAX
+
+_irq_done:
+	STA irq_disable
+
+_irq_next:
+	PLY
+	PLX
 	PLA
 	PLP
 	RTI
-	ROR $85,X
-	LDA #$CA
-	.HEX E7
-	.HEX 13
-	.HEX 2F
-	EOR label_6
-	CMP ($C1,X)
-	CMP ($C2,X)
-	.HEX C2
-	.HEX C2
-label_1
-	BRK
-	BRK
-	BRK
-	ORA ($01,X)
-	BRK
-	BRK
-	.HEX 01
+
+irq_lo_pointers:
+	.LOBYTES _irq_done
+	.LOBYTES _irq_star_wily1_press
+	.LOBYTES _irq_gyro_dark4
+	.LOBYTES _irq_rolling_drill
+	.LOBYTES _irq_wave_charge
+	.LOBYTES _irq_octoper_oa_circuring_q9_wily_press_wily_machine_5
+	.LOBYTES _irq_boss_show_get_weapon
+	.LOBYTES _irq_big_pets_1
+
+irq_hi_pointers:
+	.HIBYTES _irq_done
+	.HIBYTES _irq_star_wily1_press
+	.HIBYTES _irq_gyro_dark4
+	.HIBYTES _irq_rolling_drill
+	.HIBYTES _irq_wave_charge
+	.HIBYTES _irq_octoper_oa_circuring_q9_wily_press_wily_machine_5
+	.HIBYTES _irq_boss_show_get_weapon
+	.HIBYTES _irq_big_pets_1
+
+irq_loop_flag_table:
+	.BYTE 0, 0, 0, 1, 1, 0, 0, 1

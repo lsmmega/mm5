@@ -1,200 +1,208 @@
 NMI:
-	.ORG $C000
-
-label_14
 	PHP
-label_15
 	PHA
-	TXA
-	PHA
-	TYA
-	PHA
-	LDA $F0
-	BEQ label_1
-	JMP label_2
-label_1
-	LDA $95
-	BEQ label_3
-	JMP label_4
-label_3
-	LDA $19
-	ORA $1A
-	STA $60
-	LDA $FA
-	STA $A2
-	LDA $FC
-	STA $A4
-	LDA $FD
-	AND #$03
-	STA $A5
-	LDA $9B
-	STA $9C
-	LDA $99
-	STA $9A
+	PHX
+	PHY
+	LDA z:zrender_flag
+	BEQ @rendering
+	JMP @disable
+
+@rendering:
+	LDA z:zscreen_pause_flag
+	BEQ @unpause
+	JMP @pause
+
+@unpause:
+	LDA z:zscreen_update_flag
+	ORA z:zdraw_vertical_flag
+	STA z:zscreen_update
+	LDA z:zscreen_ycoord_undo
+	STA z:zscreen_ycoord
+	LDA z:zscreen_xcoord_undo
+	STA z:zscreen_xcoord
+	LDA z:znametable_undo
+	AND #all_nametable
+	STA z:znametable
+	LDA z:zscanline_undo
+	STA z:zscanline
+	LDA z:zirq_index_undo
+	STA z:zirq_index
 	CMP #$05
-	BNE label_5
-	LDA $78
-	STA $A4
-label_5
-	LDA $FF
-	AND #$78
+	BNE @not_irq_octoper_oa_circuring_q9_wily_press_wily_machine_5
+	LDA z:zirq_xcoord_1
+	STA z:zscreen_xcoord
+
+@not_irq_octoper_oa_circuring_q9_wily_press_wily_machine_5:
+	LDA z:zppu_ctrl
+	AND #~(all_nametable | draw_vertical | nmi_enable)
 	STA PPU_CTRL
 	LDA #$00
 	STA PPU_MASK
 	STA PPU_OAM_ADDR
 	LDA #$02
 	STA OAM_DMA
-	LDA $1C
-	BEQ label_6
+	LDA z:zupdate_tiles_flag
+	BEQ @no_tiles_update
 	LDA #$00
-	STA $1C
+	STA z:zupdate_tiles_flag
 	LDX #$50
-	JSR $C29C
-label_6
-	LDA $19
-	BEQ label_7
-	JSR $C298
-label_7
-	LDA $1A
-	BEQ label_8
-	LDA $FF
-	AND #$7F
-	ORA #$04
+	JSR _screen_update
+
+@no_tiles_update:
+	LDA z:zscreen_update_flag
+	BEQ @no_screen_update
+	JSR _screen_update_init
+
+@no_screen_update:
+	LDA z:zdraw_vertical_flag
+	BEQ @no_draw_vertical
+	LDA z:zppu_ctrl
+	AND #~nmi_enable
+	ORA #draw_vertical
 	STA PPU_CTRL
 	LDX #$00
-	STX $1A
-	JSR $C29C
-	LDA $FF
-	AND #$7F
+	STX z:zdraw_vertical_flag
+	JSR _screen_update
+	LDA z:zppu_ctrl
+	AND #~nmi_enable
 	STA PPU_CTRL
-label_8
-	LDA $18
-	BEQ label_9
-	LDA $60
-	BNE label_9
+
+@no_draw_vertical:
+	LDA z:zpalette_update_flag
+	BEQ @no_palette_update
+	LDA z:zscreen_update
+	BNE @no_palette_update
 	LDX #$00
-	STX $18
+	STX z:zpalette_update_flag
 	LDA PPU_STATUS
 	LDA #$3F
 	STA PPU_ADDRESS
 	STX PPU_ADDRESS
 	LDY #$20
-label_10
-	LDA $0600,X
+
+@loop_1:
+	LDA acurrent_background_palette, X
 	STA PPU_DATA
 	INX
 	DEY
-	BNE label_10
+	BNE @loop_1
 	LDA #$3F
 	STA PPU_ADDRESS
 	STY PPU_ADDRESS
 	STY PPU_ADDRESS
 	STY PPU_ADDRESS
-label_9
+
+@no_palette_update:
 	LDX #$05
-label_11
-	STX $8000
-	LDA $EA,X
-	STA $8001
+
+@loop_2:
+	STX bank_select
+	LDA z:zchr_bank_data, X
+	STA bank_data
 	DEX
-	BPL label_11
-	LDA $F2
-	STA $8000
-label_4
-	LDA $9A
+	BPL @loop_2
+	LDA z:zbank_select
+	STA bank_select
+
+@pause:
+	LDA z:zirq_index
 	CMP #$04
-	BNE label_12
+	BNE @not_irq_wave_charge
 	LDA PPU_STATUS
-	LDA $78
+	LDA z:zirq_xcoord_1
 	STA PPU_SCROLL
 	LDA #$00
 	STA PPU_SCROLL
-	BEQ label_13
-label_12
+	BEQ @done
+
+@not_irq_wave_charge:
 	LDA PPU_STATUS
-	LDA $A4
+	LDA z:zscreen_xcoord
 	STA PPU_SCROLL
-	LDA $A2
+	LDA z:zscreen_ycoord
 	STA PPU_SCROLL
-label_13
-	LDA $FE
+
+@done:
+	LDA z:zppu_mask
 	STA PPU_MASK
-	LDA $A5
-	ORA $FF
+	LDA z:znametable
+	ORA z:zppu_ctrl
 	STA PPU_CTRL
-	LDA $9C
-	STA label_14
-	STA label_15
-	LDX $96
-	STA $E000,X
-	BEQ label_2
-	LDX $9A
-	LDA $C280,X
-	STA $97
-	LDA $C288,X
-	STA $98
-label_2
-	INC $92
+	LDA z:zscanline
+	STA irq_latch
+	STA irq_reload
+	LDX z:zirq_flag
+	STA irq_disable, X
+	BEQ @disable
+	LDX z:zirq_index
+	LDA irq_lo_pointers, X
+	STA z:zirq_pointer
+	LDA irq_hi_pointers, X
+	STA z:zirq_pointer + 1
+
+@disable:
+	INC z:znmi_frame
 	LDX #$FF
-	STX $90
+	STX z:zthread_handle_flag
 	INX
 	LDY #$04
-label_17
-	LDA $80,X
+
+@loop_3:
+	LDA z:zthread_flag, X
 	CMP #$01
-	BNE label_16
-	DEC $81,X
-	BNE label_16
+	BNE @nz
+	DEC z:zthread_timer, X
+	BNE @nz
 	LDA #$04
-	STA $80,X
-label_16
+	STA z:zthread_flag, X
+
+@nz:
 	INX
 	INX
 	INX
 	INX
 	DEY
-	BNE label_17
-	LDA $9A
+	BNE @loop_3
+	LDA z:zirq_index
 	CMP #$04
-	BEQ label_18
+	BEQ _is_irq_wave_charge
+
+_irq_pop:
 	TSX
-	LDA $0107,X
-	STA $E9
-	LDA $0106,X
-	STA $E8
-	LDA #$C1
-	STA $0107,X
-	LDA #$47
-	STA $0106,X
-label_18
-	PLA
-	TAY
-	PLA
-	TAX
+	LDA astack - $F8, X
+	STA z:zreturn_pointer + 1
+	LDA astack - $F9, X
+	STA z:zreturn_pointer
+	LDA #>_nmi_handle_audio
+	STA astack - $F8, X
+	LDA #<_nmi_handle_audio
+	STA astack - $F9, X
+
+_is_irq_wave_charge:
+	PLY
+	PLX
 	PLA
 	PLP
 	RTI
+
+_nmi_handle_audio:
 	PHP
 	PHP
 	PHP
 	PHA
-	TXA
-	PHA
-	TYA
-	PHA
+	PHX
+	PHY
 	TSX
 	SEC
-	LDA $E8
+	LDA z:zreturn_pointer
 	SBC #$01
-	STA $0105,X
-	LDA $E9
+	STA astack - $FA, X
+	LDA z:zreturn_pointer + 1
 	SBC #$00
-	STA $0106,X
-	JSR $FF68
-	PLA
-	TAY
-	PLA
-	TAX
+	STA astack - $F9, X
+	JSR _audio_bankswitch
+	PLY
+	PLX
 	PLA
 	PLP
 	RTS
