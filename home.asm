@@ -15,6 +15,4 @@
 .INCLUDE "home/nametable_arrangement.asm"
 .INCBIN  "home/home_3.bin"
 ;.INCLUDE "home/reset.asm"
-;.INCLUDE "home/irq.asm"
-;.INCLUDE "home/nmi.asm"
 ;.INCLUDE "home/vectors.asm"
